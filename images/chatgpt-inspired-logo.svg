@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">ChatGPT-inspired logo</title>
+  <desc id="desc">White interwoven six-loop knot mark on a dark background.</desc>
+  <rect width="256" height="256" rx="44" fill="#101010"/>
+  <g fill="none" stroke="#FFFFFF" stroke-width="13" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M128 49c-17-18-46-13-56 8-5 11-4 24 2 34l54 93c10 17 32 23 49 13 17-10 23-32 13-49l-9-16"/>
+    <path d="M128 49c17-18 46-13 56 8 5 11 4 24-2 34l-54 93c-10 17-32 23-49 13-17-10-23-32-13-49l9-16"/>
+    <path d="M73 91c-24-3-43 17-39 41 2 12 10 22 21 28l107 62c17 10 39 4 49-13 10-17 4-39-13-49l-16-9"/>
+    <path d="M183 91c24-3 43 17 39 41-2 12-10 22-21 28L94 222c-17 10-39 4-49-13-10-17-4-39 13-49l16-9"/>
+    <path d="M56 128c-18 17-13 46 8 56 11 5 24 4 34-2l93-54c17-10 23-32 13-49-10-17-32-23-49-13l-16 9"/>
+    <path d="M200 128c18 17 13 46-8 56-11 5-24 4-34-2l-93-54c-17-10-23-32-13-49 10-17 32-23 49-13l16 9"/>
+  </g>
+</svg>

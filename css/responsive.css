@@ -1,0 +1,87 @@
+@media (min-width: 768px){
+    .navbar-expand-md .navbar-nav .nav-link {
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
+}
+@media (max-width: 767.9px){
+    .main-banner-sec .main-content {
+        top: 2.4%;
+    }
+    .main-banner-sec .main-content h1{
+        font-size: 1rem;
+        margin-bottom: 0.5rem!important;
+    }
+    .main-banner-sec .main-content p{
+        width: 95%!important;
+    }
+    .main-banner-sec .banner-sec-in {
+        height: 255px;
+        overflow: hidden;
+    }
+    .main-banner-sec .bottom-path {
+        position: absolute;
+        bottom: 0%;
+        left: -1px;
+    }
+    .courses-sec .date{
+        margin-bottom: 1rem;
+        padding: 25px!important;
+    }
+    .courses-sec .vacancy {
+        margin-bottom: 1rem;
+        padding: 30px!important;
+    }
+    .courses-sec .card {
+        margin-bottom: 2rem;
+    }
+    .courses-sec{
+        padding-bottom: 1rem!important;
+    }
+    .courses-sec .h3{
+        font-size: 1rem;
+    }
+    .inner-banner {
+        height: auto;
+    }
+    .inner-banner .highlight br {
+        display: none;
+    }
+    .video_wrapper {
+       display: none;
+    }
+    .subnav {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .subnav .navitem {
+        width: 100%;
+        text-align: center;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+    }
+    #Details .details-card,
+    #Details .details-card2{
+        width: 100%;
+        margin: 1rem;
+    }
+    .reviews-sec .card .media{
+        text-align: center;
+        flex-direction: column;
+    }
+    .reviews-sec .review-author{
+        margin: auto!important;
+    }
+    .reviews-sec .card .media .media-body{
+        margin-top: 1rem;
+    }
+    .common-banner {
+        height: 10rem;
+    }
+    .contact-details .card {
+        height: auto;
+    }
+    .common-banner2 {
+        height: 10rem;
+    }
+}
