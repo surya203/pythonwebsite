@@ -1,0 +1,3539 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PythonLife | Python, AI, Data Analytics &amp; DevOps Courses in Telugu</title>
+        <meta name="description" content="Learn Python, AI, Data Science, DevOps, Java, SQL, Data Analytics and more in Telugu with practical, career-focused live and recorded courses from PythonLife.">
+        <link rel="canonical" href="https://pythonlife.in/" />
+        <meta name="Developer" content="Kiran Sagar">
+        <meta property="og:title" content="PythonLife | Learn Technology in Telugu"/>
+        <meta property="og:description" content="Learn Python, AI, Data Analytics, Data Science, DevOps, Java and SQL in Telugu with practical, career-focused live and recorded courses from PythonLife."/>
+        <meta property="og:url" content="https://pythonlife.in/" />
+        <meta property="og:site_name" content="PythonLife" />
+        <meta property="og:locale" content="en_IN" />
+        <meta property="og:type" content="website" />
+        <meta name="robots" content="index, follow, max-image-preview:large" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="PythonLife | Learn Technology in Telugu" />
+        <meta name="twitter:description" content="Learn Python, AI, Data Analytics, Data Science, DevOps, Java and SQL in Telugu with practical career-focused training." />
+        <meta name="twitter:image" content="https://pythonlife.in/images/pythonlogo.png" />
+        <meta property="og:image" content="https://pythonlife.in/images/pythonlogo.png" />
+        <meta property="og:image:alt" content="PythonLife Telugu Technology Education" />
+  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+
+<style>
+
+:root{
+  --bg:#000; --line:rgba(255,255,255,.12); --text:#fff; --muted:#b4b4b4;
+  --accent:#ff6600; --accent-2:#ff8533;
+  --glass:rgba(255,255,255,.06); --glass-b:rgba(255,255,255,.16);
+  --head:"Bricolage Grotesque","Noto Sans Telugu",system-ui,sans-serif;
+  --body:"Mulish","Noto Sans Telugu",system-ui,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--bg)}
+body{margin:0;color:var(--text);font-family:var(--body);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1120px,100% - 2rem);margin-inline:auto}
+
+/* animated particle backdrop (drawn on a canvas by the script at the bottom) */
+.bg-fx{position:fixed;inset:0;z-index:-2;width:100%;height:100%;pointer-events:none}
+
+/* glowing backdrop that the glass sits on */
+.blobs{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
+.blobs i{position:absolute;border-radius:50%;filter:blur(90px);translate:calc(var(--px,0)*var(--m)*1px) calc(var(--py,0)*var(--m)*1px);transition:translate .7s ease-out;animation:drift 20s ease-in-out infinite alternate}
+.blobs i:nth-child(1){--m:60;width:46vmax;height:46vmax;left:-14vmax;top:-16vmax;background:#ff6600;opacity:.16}
+.blobs i:nth-child(2){--m:-40;width:34vmax;height:34vmax;right:-10vmax;top:28vh;background:#ff9a3c;opacity:.08;animation-delay:-6s}
+.blobs i:nth-child(3){--m:30;width:40vmax;height:40vmax;left:12vw;bottom:-22vmax;background:#c2410c;opacity:.11;animation-delay:-12s}
+@keyframes drift{to{transform:translate3d(4vmax,3vmax,0) scale(1.12)}}
+
+/* glass surface + pointer spotlight */
+.glass{background:var(--glass);border:1px solid var(--glass-b);-webkit-backdrop-filter:blur(18px) saturate(150%);backdrop-filter:blur(18px) saturate(150%);box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 24px 50px -28px rgba(0,0,0,.8)}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.glass{background:rgba(30,30,30,.88)}}
+.spot{position:relative;overflow:hidden}
+.spot::before{content:"";position:absolute;inset:0;background:radial-gradient(380px circle at var(--mx,50%) var(--my,50%),rgba(255,102,0,.28),transparent 60%);opacity:0;transition:opacity .3s;pointer-events:none}
+.spot:hover::before{opacity:1}
+.spot>*{position:relative;z-index:1}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.8rem 1.4rem;border-radius:999px;font-weight:800;font-size:.95rem;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:background-color .2s,color .2s,border-color .2s,box-shadow .2s}
+.btn-sun,.btn-ink{background:var(--accent);color:#000;box-shadow:0 8px 24px -10px rgba(255,102,0,.8)}
+.btn-sun:hover,.btn-ink:hover{background:var(--accent-2);box-shadow:0 10px 30px -8px rgba(255,102,0,.95)}
+.btn-line{background:var(--glass);border-color:var(--glass-b);color:#fff;-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+.btn-line:hover{border-color:var(--accent);background:rgba(255,102,0,.16)}
+
+/* header */
+.top{position:sticky;top:0;z-index:20;background:rgba(10,10,10,.4);-webkit-backdrop-filter:blur(18px) saturate(150%);backdrop-filter:blur(18px) saturate(150%);border-bottom:1px solid var(--glass-b);transition:background-color .3s}
+.top.scrolled{background:rgba(10,10,10,.72)}
+.top .wrap{display:flex;align-items:center;gap:1rem;min-height:68px}
+.logo img{height:38px;width:auto}
+.nav{display:flex;align-items:center;gap:.25rem;margin-left:auto}
+.nav a,.nav summary{padding:.5rem .8rem;border-radius:10px;font-weight:700;font-size:.92rem;text-decoration:none !important ;cursor:pointer;list-style:none}
+.nav summary::-webkit-details-marker{display:none}
+.nav a:hover,.nav summary:hover{background:rgba(255,255,255,.09);color:var(--accent-2)}
+.nav details{position:relative}
+.nav summary::after{content:"";display:inline-block;width:.4em;height:.4em;margin-left:.45em;border:solid currentColor;border-width:0 2px 2px 0;transform:translateY(-.15em) rotate(45deg)}
+.menu{position:absolute;top:calc(100% + 8px);left:0;min-width:300px;padding:.5rem;background:rgba(22,22,22,.86);border:1px solid var(--glass-b);border-radius:16px;box-shadow:inset 0 1px 0 rgba(255,255,255,.18),0 24px 50px -20px rgba(255,102,0,.35)}
+.menu a{display:block;font-weight:600}
+.nav .nav-cta{margin-left:.5rem;color:#000}
+.nav .nav-cta:hover{background:var(--accent-2);color:#000}
+.burger{display:none;margin-left:auto;width:44px;height:44px;border:1px solid var(--glass-b);border-radius:12px;background:var(--glass);cursor:pointer}
+.burger span,.burger span::before,.burger span::after{display:block;width:18px;height:2px;background:#fff;margin:auto;position:relative}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0}
+.burger span::before{top:-6px}.burger span::after{top:6px}
+
+/* hero */
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center;padding-block:4.5rem}
+.hero h1{margin:0;font-family:var(--head);font-weight:800;font-size:clamp(2rem,4.4vw,3.2rem);line-height:1.1;letter-spacing:-.02em}
+.hero h1 b{display:block;font-size:1.65em;line-height:1.25;font-weight:800;letter-spacing:0}
+.hero p{max-width:34rem;margin:1.25rem 0 2rem;color:var(--muted);font-size:1.05rem}
+.cta-row{display:flex;flex-wrap:wrap;gap:.75rem}
+.hero .since{margin-top:1.75rem;color:#8a8a8a;font-size:.9rem}
+.code{border-radius:20px;overflow:hidden;transition:transform .25s ease-out;will-change:transform}
+.code-bar{display:flex;gap:.4rem;align-items:center;padding:.7rem 1rem;background:rgba(255,255,255,.05);border-bottom:1px solid var(--line);color:var(--muted);font-size:.8rem}
+.code-bar i{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.25)}
+.code-bar span{margin-left:.5rem}
+.run{margin-left:auto;display:inline-flex;align-items:center;padding:.3rem .85rem;border:0;border-radius:999px;background:var(--accent);color:#000;font:800 .78rem var(--body);cursor:pointer;transition:background-color .2s}
+.run::before{content:"";border-left:7px solid #000;border-block:5px solid transparent;margin-right:.4rem}
+.run:hover:not(:disabled){background:var(--accent-2)}
+.run:disabled{opacity:.6;cursor:default}
+.code pre{margin:0;padding:1.25rem 1.25rem 1rem;font:500 .95rem/1.8 ui-monospace,SFMono-Regular,Menlo,Consolas,"Noto Sans Telugu",monospace;color:#ececec;overflow-x:auto}
+.k{color:var(--accent-2)}.s{color:#ffd9b8}.c{color:#7d7d7d}
+.out{padding:.9rem 1.25rem 1.25rem;border-top:1px dashed var(--line);font-family:var(--head);font-weight:600;font-size:1.15rem;min-height:9.5rem}
+.out small{display:block;margin-bottom:.3rem;color:#7d7d7d;font:600 .75rem var(--body)}
+.hint{color:#7d7d7d;font:600 .92rem var(--body)}
+.line{animation:in .35s ease both}
+@keyframes in{from{opacity:0;translate:0 6px}}
+
+/* sections */
+section{padding-block:4.5rem}
+.sec-head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:1rem;margin-bottom:2rem}
+h2{margin:0;font-family:var(--head);font-weight:800;font-size:clamp(1.6rem,3vw,2.2rem);letter-spacing:-.015em;line-height:1.15}
+.sec-head-2{margin-top:3.5rem}
+.cards{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1.25rem}
+.ccard{display:flex;flex-direction:column;padding:.9rem .9rem 1.25rem;border-radius:22px;text-align:center;transition:transform .3s cubic-bezier(.2,.8,.2,1),border-color .25s,box-shadow .25s}
+.ccard:hover{transform:translateY(-6px);border-color:rgba(255,102,0,.6);box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 26px 50px -24px rgba(255,102,0,.55)}
+.cthumb{position:relative;aspect-ratio:16/10;margin-bottom:1.1rem;border-radius:16px;overflow:hidden;isolation:isolate;background:#000;box-shadow:none;
+}
+.cthumb::before{content:"";position:absolute;inset:-20px;z-index:-1;background:var(--img) center/cover no-repeat;filter:blur(18px) saturate(1.15);opacity:.55}
+.cthumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center;padding:0px;transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+.ccard:hover .cthumb img{transform:scale(1.05)}
+.ccard h3{margin:0 0 .6rem;padding-inline:.35rem;min-height:2.6em;display:flex;align-items:center;justify-content:center;font-family:var(--head);font-weight:600;font-size:1.08rem;line-height:1.3}
+.ctype{margin:0;color:var(--muted);font-size:.88rem}
+.ctype b{color:var(--accent-2);font-weight:800}
+.seats{margin:.15rem 0 1.1rem;font-weight:700;color:var(--muted);font-size:.85rem}
+.ccard .btn{margin-top:auto;align-self:center;padding:.6rem 1.5rem;font-size:.9rem}
+
+.work{border-block:1px solid var(--line)}
+.logos-panel{padding:1rem;border-radius:22px}
+.logos{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:.75rem}
+.logos img{width:100%;aspect-ratio:3/2;object-fit:contain;padding:.6rem;background:#fff;border-radius:14px;transition:transform .25s}
+.logos img:hover{transform:scale(1.05)}
+
+.say{border-radius:26px;padding:3rem;display:flex;flex-wrap:wrap;gap:1.5rem;align-items:center;justify-content:space-between}
+.say p{margin:.5rem 0 0;color:var(--muted);max-width:32rem}
+
+.wa{position:fixed;right:1rem;bottom:1rem;z-index:30;width:56px;height:56px;border-radius:50%;box-shadow:0 10px 24px -8px rgba(0,0,0,.7);transition:transform .2s}
+.wa:hover{transform:scale(1.08)}
+.wa img{width:100%;height:100%;border-radius:50%}
+/* ===== animations ===== */
+@keyframes rise{from{opacity:0;translate:0 28px}}
+@keyframes float{from{translate:0 0}to{translate:0 -10px}}
+@keyframes shimmer{from{background-position:120% 0}to{background-position:-120% 0}}
+@keyframes blink{50%{opacity:0}}
+@keyframes marquee{to{transform:translateX(-50%)}}
+@keyframes ring{from{opacity:.8;scale:1}to{opacity:0;scale:1.75}}
+
+/* hero entrance, one orchestrated sequence */
+.hero .wrap>div:first-child>*{animation:rise .8s cubic-bezier(.2,.8,.2,1) both}
+.hero .wrap>div:first-child>:nth-child(1){animation-delay:.05s}
+.hero .wrap>div:first-child>:nth-child(2){animation-delay:.2s}
+.hero .wrap>div:first-child>:nth-child(3){animation-delay:.35s}
+.hero .wrap>div:first-child>:nth-child(4){animation-delay:.5s}
+.hero .code{animation:rise .9s cubic-bezier(.2,.8,.2,1) .3s both,float 7s ease-in-out 1.3s infinite alternate}
+
+/* light sweep across the Telugu word */
+@supports ((-webkit-background-clip:text) or (background-clip:text)){
+  .hero h1 b{background:linear-gradient(100deg,#fff 0%,#fff 38%,#ffb27a 50%,#fff 62%,#fff 100%) 120% 0/250% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;animation:shimmer 5s ease-in-out 1s infinite}
+}
+.cur{display:inline-block;width:.55ch;height:1.1em;background:var(--accent);vertical-align:-.18em;animation:blink 1s steps(1) infinite}
+
+/* scroll reveal (staggered via --d) */
+.js .reveal{opacity:0;translate:0 26px;transition:opacity .7s ease var(--d,0s),translate .7s cubic-bezier(.2,.8,.2,1) var(--d,0s)}
+.js .ccard.reveal{transition:opacity .7s ease var(--d,0s),translate .7s cubic-bezier(.2,.8,.2,1) var(--d,0s),transform .25s,border-color .25s}
+.js .reveal.in{opacity:1;translate:0 0}
+
+/* scrolling company logos, pauses on hover */
+.js .logos-panel{padding-inline:0}
+.js .logos{display:flex;gap:0;width:max-content;animation:marquee 45s linear infinite}
+.js .logos img{width:150px;flex:none;margin-right:.75rem}
+.js .logos-panel:hover .logos{animation-play-state:paused}
+.js .logos-panel{-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+
+/* button light sweep + WhatsApp pulse */
+.btn-sun,.btn-ink{position:relative;overflow:hidden}
+.btn-sun::after,.btn-ink::after{content:"";position:absolute;inset:0;translate:-120% 0;background:linear-gradient(100deg,transparent 30%,rgba(255,255,255,.5) 50%,transparent 70%);transition:translate .6s;pointer-events:none}
+.btn-sun:hover::after,.btn-ink:hover::after{translate:120% 0}
+.wa::before{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid rgba(37,211,102,.8);animation:ring 2.4s ease-out infinite;pointer-events:none}
+
+@media (max-width:860px){
+  .burger{display:block}
+  .nav{display:none;position:absolute;top:68px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;padding:.75rem 1rem 1rem;background:rgba(14,14,14,.92);border-bottom:1px solid var(--glass-b)}
+  .nav.open{display:flex}
+  .menu{position:static;box-shadow:none;border:0;background:transparent;min-width:0;padding:0 0 0 .75rem}
+  .nav .nav-cta{margin:.5rem 0 0}
+  .hero .wrap{grid-template-columns:1fr;padding-block:3rem}
+  .cards{grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem}
+  .foot{grid-template-columns:1fr}
+  .say{padding:2rem 1.5rem}
+  section{padding-block:3.25rem}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important}
+  *,*::before,*::after{animation:none!important}
+  .js .reveal{opacity:1;translate:none}
+  .js .logos{flex-wrap:wrap;width:auto}
+  .js .logos-panel{-webkit-mask-image:none;mask-image:none;padding-inline:1rem}
+}
+.blobs{display:none !important}
+/* student reviews */
+.rv-head{display:flex;flex-direction:column;align-items:center;text-align:center;margin-bottom:2.25rem}
+.rv-head h2{margin:0;font:800 clamp(2rem,4.4vw,3.2rem)/1.12 var(--head);letter-spacing:-.02em}
+.rv-head h2 span{color:var(--accent)}
+.rv-head p{margin:1rem auto 0;max-width:36rem;color:var(--muted);font-size:1.02rem}
+.rv-wrap{position:relative}
+.rv-track{display:flex;gap:1.25rem;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:.5rem .25rem 1.25rem;scrollbar-width:none}
+.rv-track::-webkit-scrollbar{display:none}
+.rv-card{flex:0 0 min(360px,86%);scroll-snap-align:start;display:flex;flex-direction:column;gap:1rem;padding:1.6rem;border-radius:20px;border-top:3px solid var(--accent);transition:transform .25s,box-shadow .25s}
+.rv-card:hover{transform:translateY(-4px);box-shadow:0 20px 40px -24px rgba(255,102,0,.5)}
+.rv-stars{display:flex;gap:.2rem;color:var(--accent)}
+.rv-stars svg{width:18px;height:18px;fill:currentColor}
+.rv-stars .off{color:rgba(255,255,255,.2)}
+.rv-text{margin:0;color:#e6e6e6;font-size:.98rem;line-height:1.65;flex:1}
+.rv-text::before{content:"\201C";display:block;font:800 2.4rem/1 var(--head);color:var(--accent);margin-bottom:.15rem}
+.rv-who{display:flex;align-items:center;gap:.85rem;padding-top:1rem;border-top:1px solid var(--line)}
+.rv-av{display:grid;place-items:center;flex:none;width:46px;height:46px;border-radius:50%;overflow:hidden;background:rgba(255,102,0,.16);border:1px solid rgba(255,102,0,.45);color:var(--accent-2);font:800 1rem var(--head)}
+.rv-av img{width:100%;height:100%;object-fit:cover}
+.rv-who b{display:block;font:700 .98rem var(--head)}
+.rv-who span{display:block;color:var(--muted);font-size:.85rem}
+.rv-nav{display:flex;justify-content:center;gap:.75rem;margin-top:.5rem}
+.rv-nav button{width:44px;height:44px;border-radius:50%;border:1px solid var(--glass-b);background:var(--glass);color:#fff;cursor:pointer;transition:background-color .2s,color .2s,border-color .2s}
+.rv-nav button:hover{background:var(--accent);border-color:var(--accent);color:#000}
+.rv-nav svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.rv-card.rv-shot{flex:0 0 min(300px,80%);padding:.6rem;align-self:flex-start;border-radius:18px}
+.rv-open{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in;border-radius:12px;overflow:hidden}
+.rv-open img{display:block;width:100%;height:auto;min-height:160px;border-radius:12px;background:rgba(255,255,255,.04)}
+.rv-box{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;padding:1.5rem;background:rgba(0,0,0,.92);cursor:zoom-out}
+.rv-box[hidden]{display:none}
+.rv-box img{max-width:min(92vw,900px);max-height:90vh;width:auto;height:auto;border-radius:14px}
+.rv-x{position:absolute;top:1rem;right:1.25rem;width:44px;height:44px;border-radius:50%;border:1px solid var(--glass-b);background:var(--glass);color:#fff;font-size:1.6rem;line-height:1;cursor:pointer}
+.rv-x:hover{background:var(--accent);color:#000}
+.rv-track{scroll-snap-type:none !important;scroll-behavior:auto !important}
+.rv-card{scroll-snap-align:none}
+/* professional polish */
+.rv-eyebrow{display:inline-block;margin-bottom:1rem;padding:.35rem .9rem;border-radius:999px;background:rgba(255,102,0,.12);border:1px solid rgba(255,102,0,.4);color:var(--accent-2);font:800 .72rem var(--body);letter-spacing:.14em;text-transform:uppercase}
+.rv-head h2::after{content:"";display:block;width:56px;height:3px;margin:.9rem auto 0;border-radius:3px;background:var(--accent)}
+.rv-head p{margin-top:1.1rem}
+.rv-wrap{-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+.rv-track{gap:1.5rem;padding:1rem .5rem 1.5rem}
+.rv-card.rv-shot{flex:0 0 min(310px,80%);padding:.55rem;border:1px solid rgba(255,255,255,.12);border-top:3px solid var(--accent);border-radius:18px;background:rgba(255,255,255,.04);box-shadow:0 18px 40px -26px rgba(0,0,0,.9);transition:transform .3s,box-shadow .3s,border-color .3s}
+.rv-card.rv-shot:hover{transform:translateY(-6px);border-color:rgba(255,102,0,.55);box-shadow:0 26px 50px -24px rgba(255,102,0,.45)}
+.rv-open{position:relative}
+.rv-open::after{content:"";position:absolute;inset:0;border-radius:12px;background:linear-gradient(180deg,transparent 60%,rgba(0,0,0,.35));opacity:0;transition:opacity .3s}
+.rv-card:hover .rv-open::after{opacity:1}
+.rv-hint{margin:.25rem 0 0;text-align:center;color:#8a8a8a;font-size:.82rem;letter-spacing:.02em}
+.rv-box{-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);background:rgba(0,0,0,.88);animation:rvfade .2s ease-out}
+.rv-box img{box-shadow:0 30px 80px -20px rgba(255,102,0,.35);border:1px solid rgba(255,255,255,.12)}
+@keyframes rvfade{from{opacity:0}to{opacity:1}}
+@media (max-width:860px){.rv-wrap{-webkit-mask-image:none;mask-image:none}}
+/* professional navbar (from reference) */
+.ic,.ni{fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+/* professional navbar */
+.top{background:rgba(0,0,0,.78);border-bottom:1px solid rgba(255,255,255,.08);box-shadow:0 1px 0 rgba(255,102,0,.18),0 10px 30px -22px rgba(0,0,0,.9)}
+.top.scrolled{background:rgba(0,0,0,.92)}
+.nav{gap:.15rem}
+.nav>a:not(.nav-cta),.nav summary{position:relative;padding:.55rem .95rem;border-radius:8px;font-weight:600;font-size:.93rem;letter-spacing:.01em;color:rgba(255,255,255,.82);transition:color .2s,background-color .2s}
+.nav>a:not(.nav-cta):hover,.nav summary:hover,.nav details[open]>summary{background:transparent;color:#fff}
+.nav>a:not(.nav-cta)::after{content:"";position:absolute;left:.95rem;right:.95rem;bottom:.2rem;height:2px;border-radius:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .25s ease}
+.nav>a:not(.nav-cta):hover::after{transform:scaleX(1)}
+.nav summary::after{width:.38em;height:.38em;margin-left:.5em;border-width:0 1.5px 1.5px 0;transition:transform .2s}
+.nav details[open]>summary::after{transform:translateY(.05em) rotate(225deg)}
+.menu{top:calc(100% + 12px);min-width:320px;padding:.4rem;background:rgba(12,12,12,.97);border:1px solid rgba(255,255,255,.1);border-radius:12px;box-shadow:0 24px 48px -16px rgba(0,0,0,.9);animation:menuin .18s ease-out}
+.menu a{padding:.65rem .9rem;border-radius:8px;font-weight:500;font-size:.9rem;color:rgba(255,255,255,.85);border-left:2px solid transparent;transition:background-color .15s,color .15s,border-color .15s}
+.menu a:hover{background:rgba(255,102,0,.1);color:#fff;border-left-color:var(--accent)}
+.nav .nav-cta{margin-left:.9rem;padding:.55rem 1.35rem;font-size:.9rem;font-weight:700;letter-spacing:.02em}
+@keyframes menuin{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+@media (max-width:860px){
+  .nav{background:rgba(0,0,0,.97);border-bottom:1px solid rgba(255,255,255,.08)}
+  .nav>a:not(.nav-cta),.nav summary{padding:.8rem .5rem;border-bottom:1px solid rgba(255,255,255,.06)}
+  .nav>a:not(.nav-cta)::after{display:none}
+  .menu{animation:none;background:transparent}
+}
+.menu::before{content:"";position:absolute;left:0;right:0;top:-14px;height:14px}
+/* dropdown content */
+.menu{min-width:360px;padding:.5rem}
+.menu-label{padding:.55rem .9rem .5rem;font-size:.7rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-2);border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:.4rem}
+.menu a{display:flex;align-items:center;gap:.8rem;padding:.6rem .7rem;border-left:0;border-radius:10px}
+.menu a .mi{display:grid;place-items:center;flex:none;width:34px;height:34px;border-radius:9px;background:rgba(255,102,0,.12);border:1px solid rgba(255,102,0,.3);color:var(--accent-2);transition:background-color .15s,color .15s}
+.menu a .mi .ic{width:17px;height:17px}
+.menu a .mt{flex:1;line-height:1.3}
+.menu a::after{content:"";flex:none;width:.4em;height:.4em;border:solid currentColor;border-width:2px 2px 0 0;transform:rotate(45deg);opacity:0;translate:-4px 0;transition:opacity .15s,translate .15s}
+.menu a:hover{background:rgba(255,255,255,.06);color:#fff}
+.menu a:hover .mi{background:var(--accent);color:#000}
+.menu a:hover::after{opacity:.8;translate:0 0}
+@media (max-width:860px){.menu{min-width:0;padding:.25rem 0 .5rem .5rem}.menu-label{display:none}.menu a::after{display:none}}
+/* icons */
+.btn .ic,.nav-cta .ic{width:18px;height:18px;flex:none}
+.ic-fill{fill:currentColor;stroke:none}
+.run .ic{width:11px;height:11px;margin-right:.35rem}
+.hero .since{display:flex;align-items:center;gap:.55rem}
+.hero .since .ic{width:18px;height:18px;flex:none;color:var(--accent-2)}
+.sec-head h2{display:flex;align-items:center;gap:.8rem}
+.hic{display:inline-grid;place-items:center;flex:none;width:44px;height:44px;border-radius:12px;background:rgba(255,102,0,.12);border:1px solid rgba(255,102,0,.35);color:var(--accent-2)}
+.hic .ic{width:22px;height:22px}
+.ctype,.seats{display:flex;align-items:center;justify-content:center;gap:.45rem}
+.ctype .ic,.seats .ic{width:16px;height:16px;flex:none;color:var(--accent-2)}
+.rv-eyebrow{display:inline-flex;align-items:center;gap:.45rem}
+.rv-eyebrow .ic{width:14px;height:14px;fill:currentColor}
+.rv-hint{display:flex;align-items:center;justify-content:center;gap:.4rem}
+.rv-hint .ic{width:14px;height:14px;flex:none}
+.foot h4{display:flex;align-items:center;gap:.5rem}
+.foot h4 .ic{width:18px;height:18px;color:var(--accent-2)}
+.foot li a,.social a{display:inline-flex;align-items:center;gap:.5rem}
+.foot li a .ic,.social a .ic{width:16px;height:16px;flex:none;color:var(--accent-2)}
+.foot a:hover{ color:var(--accent-2);text-decoration:underline;}
+.social a{padding:.4rem .8rem; transition:border-color .2s,background-color .2s}
+.social a:hover{color:var(--accent);text-decoration :;}
+.ccard .btn:hover .ic,.cta-row .btn:hover .ic{translate:3px 0}
+.btn .ic{transition:translate .2s}
+@media (max-width:860px){.hic{width:38px;height:38px}.sec-head h2{gap:.6rem}}
+/* track record */
+.stats-head{text-align:center;max-width:46rem;margin:0 auto 3rem}
+.stats-head h2{margin:0;font-family:var(--head);font-weight:800;font-size:clamp(2rem,4.4vw,3.2rem);line-height:1.12;letter-spacing:-.02em}
+.stats-head h2 span{color:var(--accent)}
+.stats-head p{margin:1rem auto 0;color:var(--muted);font-size:1.02rem}
+.stat-row{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem}
+.stat{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;padding:2rem 1.25rem 1.75rem;border-radius:22px;overflow:hidden;
+  transition:transform .3s cubic-bezier(.2,.8,.2,1),border-color .25s,box-shadow .25s}
+.stat::before{content:"";position:absolute;left:18%;right:18%;top:0;height:3px;border-radius:0 0 4px 4px;background:var(--c);opacity:.9}
+.stat:hover{transform:translateY(-6px);border-color:var(--c);box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 26px 50px -26px var(--c)}
+.stat-ic{display:grid;place-items:center;width:52px;height:52px;margin-bottom:1.1rem;border-radius:14px;color:var(--c);
+  background:color-mix(in srgb,var(--c) 14%,transparent);border:1px solid color-mix(in srgb,var(--c) 38%,transparent)}
+.stat-ic .ic{width:24px;height:24px}
+.stat b{font-family:var(--head);font-weight:800;font-size:clamp(2.2rem,3.6vw,2.9rem);line-height:1;letter-spacing:-.02em;color:#fff;font-variant-numeric:tabular-nums}
+.stat-l{margin-top:.7rem;padding-top:.7rem;border-top:1px solid var(--line);width:100%;max-width:11rem;color:var(--muted);font-weight:700;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;line-height:1.5}
+@media (max-width:980px){.stat-row{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:480px){.stat-row{gap:.8rem}.stat{padding:1.5rem .8rem 1.25rem}.stat-ic{width:44px;height:44px}.stat-l{font-size:.72rem;letter-spacing:.05em}}
+.stat.stat-in{animation:statin .6s cubic-bezier(.2,.8,.2,1) both;animation-delay:var(--d,0ms)}
+@keyframes statin{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.stat.stat-in{animation:none}}
+
+/* Students work at - logo slider */
+
+
+
+/* ===== OUR STUDENTS WORK AT ===== */
+
+.work {
+  padding: 65px 0;
+  overflow: hidden;
+  background: #080808;
+}
+
+.work .wrap {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Centered heading */
+.work .sec-head {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto 35px;
+}
+
+.work .sec-head h2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  margin: 0;
+  color: #fff;
+  font-size: clamp(26px, 3vw, 36px);
+  font-weight: 800;
+  text-align: center;
+}
+
+/* Orange icon */
+.work .hic {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  background: rgba(255, 107, 26, 0.12);
+  border: 1px solid rgba(255, 107, 26, 0.4);
+  border-radius: 12px;
+}
+
+.work .ic {
+  width: 23px;
+  height: 23px;
+  fill: none;
+  stroke: #ff6b1a;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Orange underline */
+.work .sec-head h2::after {
+  content: "";
+  display: block;
+  width: 85px;
+  height: 4px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #ff8a00, #ff5722);
+  box-shadow: 0 0 14px rgba(255, 107, 26, 0.3);
+}
+
+/* Slider container */
+.work .logos-panel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 25px 0;
+  background: #111;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 18px;
+}
+
+/* Edge fade effect */
+.work .logos-panel::before,
+.work .logos-panel::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 55px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.work .logos-panel::before {
+  left: 0;
+  background: linear-gradient(to right, #111, transparent);
+}
+
+.work .logos-panel::after {
+  right: 0;
+  background: linear-gradient(to left, #111, transparent);
+}
+
+/* Continuous sliding track */
+.work .logos-slider {
+  display: flex;
+  width: max-content;
+  animation: companyLogoSlide 38s linear infinite;
+  will-change: transform;
+}
+
+/* Logo rows */
+.work .logos-track {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 24px;
+  padding-right: 24px;
+}
+
+/* Individual company logos */
+.work .logos-track img {
+  display: block;
+  flex: 0 0 auto;
+  width: 150px;
+  height: 85px;
+  object-fit: contain;
+  padding: 12px;
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;
+  transition: transform 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.work .logos-track img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(255, 107, 26, 0.22);
+}
+
+/* Seamless right-to-left animation */
+@keyframes companyLogoSlide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pause on hover */
+.work .logos-panel:hover .logos-slider {
+  animation-play-state: paused;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .work {
+    padding: 45px 0;
+  }
+
+  .work .logos-track {
+    gap: 16px;
+    padding-right: 16px;
+  }
+
+  .work .logos-track img {
+    width: 125px;
+    height: 72px;
+    padding: 9px;
+  }
+
+  .work .logos-slider {
+    animation-duration: 30s;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .work .wrap {
+    padding: 0 12px;
+  }
+
+  .work .sec-head h2 {
+    font-size: 24px;
+  }
+
+  .work .logos-panel {
+    padding: 20px 0;
+    border-radius: 14px;
+  }
+
+  .work .logos-track {
+    gap: 12px;
+    padding-right: 12px;
+  }
+
+  .work .logos-track img {
+    width: 105px;
+    height: 65px;
+    padding: 7px;
+  }
+
+  .work .logos-panel::before,
+  .work .logos-panel::after {
+    width: 25px;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .work .logos-slider {
+    animation: none;
+  }
+}
+
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QQTYSY3C7Y"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QQTYSY3C7Y');
+</script>
+  
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "EducationalOrganization",
+      "@id": "https://pythonlife.in/#organization",
+      "name": "PythonLife",
+      "url": "https://pythonlife.in/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://pythonlife.in/images/logo.png"
+      },
+      "description": "Telugu-first technology education platform offering practical live and recorded courses.",
+      "foundingDate": "2020"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://pythonlife.in/#website",
+      "url": "https://pythonlife.in/",
+      "name": "PythonLife",
+      "publisher": {
+        "@id": "https://pythonlife.in/#organization"
+      },
+      "inLanguage": "en-IN"
+    }
+  ]
+}
+</script>
+</head>
+  <body>
+      
+
+   <style>
+      /* ==============================
+   PYTHONLIFE HEADER CSS
+   Black + Orange + White Theme
+============================== */
+
+      #top.top {
+        width: 100%;
+        position: sticky;
+        top: 0;
+        z-index: 9999;
+        background: #080808;
+        border-bottom: 1px solid rgba(255, 106, 0, 0.25);
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      /* All elements inside site header: box-sizing */
+      #top.top * {
+        box-sizing: border-box;
+      }
+
+      /* Wrap in site header: flex layout, spacing, sizing */
+      #top .wrap {
+        max-width: 1320px;
+        width: 92%;
+        min-height: 82px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 25px;
+      }
+
+      /* LOGO */
+
+      #top .logo {
+        display: inline-flex;
+        align-items: center;
+        flex-shrink: 0;
+        text-decoration: none;
+      }
+
+      /* Logo in site header: block display, sizing */
+      #top .logo img {
+        display: block;
+        width: 175px;
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+
+      /* NAVIGATION */
+
+      #top .nav {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 25px;
+      }
+
+      /* Navigation in site header (+1 related selector): flex layout, positioning context, typography */
+      #top .nav > a,
+      #top .nav details > summary {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        padding: 12px 0;
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: 600;
+        text-decoration: none;
+        white-space: nowrap;
+        cursor: pointer;
+        transition: color 0.25s ease;
+      }
+
+      /* ORANGE HOVER UNDERLINE */
+
+      #top .nav > a:not(.nav-cta)::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 4px;
+        width: 0;
+        height: 2px;
+        background: #ff6a00;
+        transition: width 0.25s ease;
+      }
+
+      /* Navigation in site header (hover, decorative pseudo-element): sizing */
+      #top .nav > a:not(.nav-cta):hover::after {
+        width: 100%;
+      }
+
+      /* Navigation in site header (+1 related selector) (hover): text colour */
+      #top .nav > a:hover,
+      #top .nav details > summary:hover {
+        color: #ff6a00;
+      }
+
+      /* DROPDOWN ARROW */
+
+      #top .nav details {
+        position: relative;
+      }
+
+      /* Navigation in site header: list-style, outline */
+      #top .nav details > summary {
+        list-style: none;
+        outline: none;
+      }
+
+      /* Navigation in site header (marker icon): hidden */
+      #top .nav details > summary::-webkit-details-marker {
+        display: none;
+      }
+
+      /* Navigation in site header (decorative pseudo-element): sizing, smooth transition, transform */
+      #top .nav details > summary::after {
+        content: "";
+        width: 7px;
+        height: 7px;
+        margin-top: -4px;
+        border-right: 1.5px solid currentColor;
+        border-bottom: 1.5px solid currentColor;
+        transform: rotate(45deg);
+        transition: transform 0.25s ease;
+      }
+
+      /* Navigation in site header (decorative pseudo-element, open state): transform */
+      #top .nav details[open] > summary::after {
+        transform: rotate(225deg);
+        margin-top: 4px;
+      }
+
+      /* DROPDOWN MENU */
+
+      #top .nav .menu {
+        position: absolute;
+        top: calc(100% + 12px);
+        left: -18px;
+        width: 340px;
+        max-height: 75vh;
+        overflow-y: auto;
+        padding: 12px;
+        background: #111111;
+        border: 1px solid #292929;
+        border-top: 3px solid #ff6a00;
+        border-radius: 10px;
+        box-shadow: 0 18px 45px rgba(0, 0, 0, 0.5);
+        animation: pythonlifeMenuIn 0.2s ease;
+      }
+
+      /* Menu label (inside navigation) in site header: typography, spacing */
+      #top .nav .menu-label {
+        padding: 10px 12px 12px;
+        color: #ff6a00;
+        font-size: 11px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        border-bottom: 1px solid #292929;
+        margin-bottom: 6px;
+      }
+
+      /* Menu (inside navigation) in site header: flex layout, box styling (rounded corners), typography */
+      #top .nav .menu > a {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 12px 10px;
+        color: #e9e9e9;
+        font-size: 13px;
+        line-height: 1.5;
+        text-decoration: none;
+        border-radius: 7px;
+        transition:
+          background 0.25s ease,
+          color 0.25s ease,
+          transform 0.25s ease;
+      }
+
+      /* Menu (inside navigation) in site header (hover): box styling (background), text colour, transform */
+      #top .nav .menu > a:hover {
+        color: #ffffff;
+        background: rgba(255, 106, 0, 0.12);
+        transform: translateX(3px);
+      }
+
+      /* MENU ICON BOX */
+
+      #top .nav .mi {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        flex-shrink: 0;
+        color: #ff6a00;
+        background: rgba(255, 106, 0, 0.1);
+        border: 1px solid rgba(255, 106, 0, 0.2);
+        border-radius: 8px;
+      }
+
+      /* Icon (inside navigation) in site header: block display, sizing */
+      #top .nav .ic {
+        display: block;
+        width: 19px;
+        height: 19px;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 1.7;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      /* Top margin (inside navigation) in site header: flex */
+      #top .nav .mt {
+        flex: 1;
+      }
+
+      /* LOGIN BUTTON */
+
+      #top .nav > a.nav-cta {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 90px;
+        padding: 12px 23px;
+        color: #ffffff;
+        background: #ff6a00;
+        border: 1px solid #ff6a00;
+        border-radius: 6px;
+        font-size: 14px;
+        font-weight: 700;
+        text-decoration: none;
+        transition:
+          background 0.25s ease,
+          border-color 0.25s ease,
+          transform 0.25s ease;
+      }
+
+      /* Navigation call-to-action in site header (hover): box styling (background), text colour, transform */
+      #top .nav > a.nav-cta:hover {
+        color: #ffffff;
+        background: #e85f00;
+        border-color: #e85f00;
+        transform: translateY(-2px);
+      }
+
+      /* HAMBURGER BUTTON */
+
+      #top .burger {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        padding: 0;
+        background: #151515;
+        border: 1px solid #333333;
+        border-radius: 7px;
+        cursor: pointer;
+      }
+
+      /* Burger in site header (+2 related selectors): block display, box styling (background, rounded corners), sizing */
+      #top .burger span,
+      #top .burger span::before,
+      #top .burger span::after {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background: #ff6a00;
+        border-radius: 2px;
+        transition: transform 0.25s ease;
+      }
+
+      /* Burger in site header: positioning context */
+      #top .burger span {
+        position: relative;
+      }
+
+      /* Burger in site header (+1 related selector) (decorative pseudo-element): absolute positioning */
+      #top .burger span::before,
+      #top .burger span::after {
+        content: "";
+        position: absolute;
+        left: 0;
+      }
+
+      /* Burger in site header (decorative pseudo-element): top */
+      #top .burger span::before {
+        top: -7px;
+      }
+
+      /* Burger in site header (decorative pseudo-element): top */
+      #top .burger span::after {
+        top: 7px;
+      }
+
+      /* HAMBURGER ACTIVE STATE */
+
+      #top .burger[aria-expanded="true"] span {
+        background: transparent;
+      }
+
+      /* Burger in site header (decorative pseudo-element): transform */
+      #top .burger[aria-expanded="true"] span::before {
+        top: 0;
+        transform: rotate(45deg);
+      }
+
+      /* Burger in site header (decorative pseudo-element): transform */
+      #top .burger[aria-expanded="true"] span::after {
+        top: 0;
+        transform: rotate(-45deg);
+      }
+
+      /* DROPDOWN ANIMATION */
+
+      @keyframes pythonlifeMenuIn {
+        from {
+          opacity: 0;
+          transform: translateY(8px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* TABLET AND MOBILE */
+
+      @media (max-width: 1000px) {
+        #top .wrap {
+          min-height: 74px;
+          gap: 15px;
+        }
+
+        #top .logo img {
+          width: 155px;
+        }
+
+        #top .burger {
+          display: inline-flex;
+          flex-shrink: 0;
+          margin-left: auto;
+        }
+
+        #top .nav {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          width: 100%;
+          max-height: calc(100vh - 74px);
+          overflow-y: auto;
+          padding: 18px 5% 25px;
+          background: #0b0b0b;
+          border-top: 1px solid #292929;
+          border-bottom: 2px solid #ff6a00;
+          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+          align-items: stretch;
+          flex-direction: column;
+          justify-content: flex-start;
+          gap: 4px;
+        }
+
+        #top .nav.is-open {
+          display: flex;
+        }
+
+        #top .nav > a,
+        #top .nav details > summary {
+          display: flex;
+          width: 100%;
+          padding: 14px 8px;
+          white-space: normal;
+          border-bottom: 1px solid #222222;
+        }
+
+        #top .nav > a:not(.nav-cta)::after {
+          display: none;
+        }
+
+        #top .nav details > summary {
+          justify-content: space-between;
+        }
+
+        #top .nav .menu {
+          position: static;
+          width: 100%;
+          max-height: none;
+          margin: 4px 0 12px;
+          padding: 8px;
+          background: #111111;
+          border: 1px solid #292929;
+          border-left: 3px solid #ff6a00;
+          border-radius: 8px;
+          box-shadow: none;
+          animation: none;
+        }
+
+        #top .nav .menu > a {
+          padding: 10px 8px;
+        }
+
+        #top .nav > a.nav-cta {
+          width: 100%;
+          margin-top: 12px;
+          padding: 14px;
+        }
+      }
+
+      /* SMALL MOBILE */
+
+      @media (max-width: 480px) {
+        #top .wrap {
+          width: 92%;
+          min-height: 68px;
+        }
+
+        #top .logo img {
+          width: 140px;
+        }
+
+        #top .burger {
+          width: 40px;
+          height: 40px;
+        }
+
+        #top .nav {
+          max-height: calc(100vh - 68px);
+        }
+
+        #top .nav .menu > a {
+          font-size: 12px;
+        }
+
+        #top .nav .mi {
+          width: 32px;
+          height: 32px;
+        }
+ }
+    </style>
+   
+
+   <header class="top" id="top">
+      <div class="wrap">
+        <!-- Logo (links to the home page) -->
+        <a class="logo" href="https://pythonlife.in/"
+          ><img src="https://pythonlife.in/images/logo.png" alt="PythonLife"
+        /></a>
+        <!-- Hamburger button: opens/closes the menu on mobile (see the script below) -->
+        <button
+          class="burger"
+          id="burger"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="nav"
+        >
+          <span></span>
+        </button>
+        <!-- Main navigation links -->
+        <nav class="nav" id="nav" aria-label="Main">
+          <a href="https://pythonlife.in/">Home</a>
+
+          <!-- Dropdown: Live courses (native <details>/<summary>, so it opens without JavaScript) -->
+          <details>
+            <summary>Live courses</summary>
+            <div class="menu">
+              <div class="menu-label">Live courses</div>
+              <a href="https://pythonlife.in/python-live-course-in-telugu.html"
+                ><span class="mi"
+                  ><svg class="ic" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M16 18l6-6-6-6M8 6l-6 6 6 6" /></svg></span
+                ><span class="mt">FullStack Python Development with AI</span></a
+              >
+              <a href="https://pythonlife.in/graphic-design-video-editing-ai.html"
+                ><span class="mi"
+                  ><svg class="ic" viewBox="0 0 24 24" aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="3" />
+                    <circle cx="8" cy="8" r="1.5" />
+                    <path d="M4 18l5-5 3 3 2-2 6 4" />
+                  </svg></span
+                ><span class="mt">Graphic Design &amp; Video Editing with AI</span></a
+              >
+              <a href="https://pythonlife.in/Genai-course-in-telugu.html"
+                ><span class="mi"
+                  ><svg class="ic" viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M12 3l1.800 5.200L19 10l-5.200 1.800L12 17l-1.800-5.200L5 10l5.200-1.800z"
+                    />
+                    <path
+                      d="M19 16l.8 2.200L22 19l-2.200.8L19 22l-.8-2.200L16 19l2.200-.8z"
+                    /></svg></span
+                ><span class="mt">Generative AI &amp; Agentic AI</span></a
+              >
+              <a href="https://pythonlife.in/data-science.html"
+                ><span class="mi"
+                  ><svg class="ic" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M4 20V10M10 20V4M16 20v-8M22 20H2" /></svg></span
+                ><span class="mt">FullStack Data Science with GenAI</span></a
+              >
+              <a href="https://pythonlife.in/oracle-live.html"
+                ><span class="mi"
+                  ><svg class="ic" viewBox="0 0 24 24" aria-hidden="true">
+                    <ellipse cx="12" cy="5" rx="8" ry="3" />
+                    <path
+                      d="M4 5v6c0 1.700 3.600 3 8 3s8-1.300 8-3V5M4 11v6c0 1.700 3.600 3 8 3s8-1.300 8-3v-6"
+                    /></svg></span
+                ><span class="mt"
+                  >Beginner to Advanced SQL &amp; PL/SQL</span
+                ></a
+              >
+              <a
+                href="https://pythonlife.in/fullstack-Genai-course-in-telugu.html"
+                ><span class="mi"
+                  ><svg class="ic" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 3l9 5-9 5-9-5z" />
+                    <path d="M3 13l9 5 9-5" /></svg></span
+                ><span class="mt"
+                  >FullStack AI with GenAI &amp; Agentic AI</span
+                ></a
+              >
+              <a href="https://pythonlife.in/devops-with-aws.html"
+                ><span class="mi"
+                  ><svg class="ic" viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M7 18a4 4 0 01-.5-8 5.500 5.500 0 0110.700-1A4.500 4.500 0 0117 18z"
+                    /></svg></span
+                ><span class="mt"
+                  >DevOps &amp; DevSecOps with MultiCloud &amp; AI</span
+                ></a
+              >
+              <a href="https://pythonlife.in/Java-Programming-Telugu.html"
+                ><span class="mi"
+                  ><svg class="ic" viewBox="0 0 24 24" aria-hidden="true">
+                    <rect x="3" y="4" width="18" height="16" rx="2" />
+                    <path d="M7 9l3 3-3 3M13 15h4" /></svg></span
+                ><span class="mt">Basic to Advanced Java &amp; AI</span></a
+              >
+            </div>
+          </details>
+          <details>
+            <!-- Dropdown: Recorded courses -->
+            <summary>Recorded courses</summary>
+            <div class="menu">
+              <div class="menu-label">Recorded courses</div>
+              <a href="https://pythonlife.in/python-course-in-telugu.html"
+                ><span class="mi"
+                  ><svg class="ic" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M16 18l6-6-6-6M8 6l-6 6 6 6" /></svg></span
+                ><span class="mt">FullStack Python Programming</span></a
+              >
+              <a href="https://pythonlife.in/oracle.html"
+                ><span class="mi"
+                  ><svg class="ic" viewBox="0 0 24 24" aria-hidden="true">
+                    <ellipse cx="12" cy="5" rx="8" ry="3" />
+                    <path
+                      d="M4 5v6c0 1.700 3.600 3 8 3s8-1.300 8-3V5M4 11v6c0 1.700 3.600 3 8 3s8-1.300 8-3v-6"
+                    /></svg></span
+                ><span class="mt">Basic to Advanced SQL &amp; PL/SQL</span></a
+              >
+              <a href="https://pythonlife.in/devops-with-gcp.html"
+                ><span class="mi"
+                  ><svg class="ic" viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M7 18a4 4 0 01-.5-8 5.500 5.500 0 0110.700-1A4.500 4.500 0 0117 18z"
+                    /></svg></span
+                ><span class="mt">DevOps &amp; DevSecOps with AWS</span></a
+              >
+              <a href="https://pythonlife.in/Java-Programming-Telugu-Rec.html"
+                ><span class="mi"
+                  ><svg class="ic" viewBox="0 0 24 24" aria-hidden="true">
+                    <rect x="3" y="4" width="18" height="16" rx="2" />
+                    <path d="M7 9l3 3-3 3M13 15h4" /></svg></span
+                ><span class="mt">Basic to Advanced Java Programming</span></a
+              >
+            </div>
+          </details>
+          <!-- Plain links: Reviews and Contact us -->
+          <a href="https://pythonlife.in/reviews.html">Reviews</a>
+       <a href="https://pythonlife.in/about_us.html">About Us</a>
+                  <a href="https://pythonlife.in/PythonLife_Free_Courses.html">Free Hub</a>
+          <a href="https://pythonlife.in/contact.html">Contact us</a>
+          <!-- Login button: opens the student portal -->
+          <a
+            class="btn btn-ink nav-cta"
+            id="login"
+            href="https://pythonlifeapp.com/"
+            >Login</a
+          >
+        </nav>
+      </div>
+    </header>
+
+
+<script>
+(function () {
+  const header = document.getElementById("top");
+  const burger = document.getElementById("burger");
+  const nav = document.getElementById("nav");
+
+  if (!header || !burger || !nav) return;
+
+  /* MOBILE MENU TOGGLE */
+  burger.addEventListener("click", function () {
+    const open = nav.classList.toggle("is-open");
+
+    burger.setAttribute("aria-expanded", String(open));
+    burger.setAttribute(
+      "aria-label",
+      open ? "Close menu" : "Open menu"
+    );
+  });
+
+  /* CLOSE AFTER CLICKING A NAVIGATION LINK */
+  nav.querySelectorAll("a").forEach(function (link) {
+    link.addEventListener("click", function () {
+      if (window.innerWidth < 992) {
+        nav.classList.remove("is-open");
+        burger.setAttribute("aria-expanded", "false");
+        burger.setAttribute("aria-label", "Open menu");
+      }
+    });
+  });
+
+  /* CLOSE WHEN CLICKING OUTSIDE */
+  document.addEventListener("click", function (event) {
+    if (
+      window.innerWidth < 992 &&
+      !header.contains(event.target)
+    ) {
+      nav.classList.remove("is-open");
+      burger.setAttribute("aria-expanded", "false");
+      burger.setAttribute("aria-label", "Open menu");
+    }
+  });
+
+  /* RESET WHEN SWITCHING TO DESKTOP */
+  window.addEventListener("resize", function () {
+    if (window.innerWidth >= 992) {
+      nav.classList.remove("is-open");
+      burger.setAttribute("aria-expanded", "false");
+    }
+  });
+
+})();
+</script>
+
+     
+      
+      
+
+    <section class="main-banner-sec">
+      <div class="banner-sec-in">
+          <video loop="true" autoplay="autoplay" controls muted>
+            <source src="videos/Digital globe.mp4" type="video/mp4">
+            <source src="videos/Digital globe.mp4" type="video/ogg">
+          </video>
+          <div class="bg-overlay"></div>
+      </div>
+      <div class="bottom-path">
+        <img src="images/vector.png" class="w-100" >
+      </div>
+      <div class="main-content">
+        <h1 class="fw-bold mb-3">Learn Programming in <b>తెలుగు</b></h1>
+        <p class="mb-3 w-50 mx-auto">We think that acquiring and comprehending information in one's own tongue will bring out the best in everyone and, without a doubt, make them a master in the subject.</p>
+        <a href="python-course-in-telugu.html" class="btn btn-light rounded-pill px-3">Explore Programs</a>
+      </div>
+    </section>
+    
+  <style>
+/* LIVE COURSES SECTION */
+#courses {
+    width: 100%;
+    padding: 50px 0;
+}
+
+#courses .wrap {
+    max-width: 1200px;
+    width: 92%;
+    margin: 0 auto;
+}
+
+/* Section Heading */
+#courses .sec-head {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#courses .sec-head h2 {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+#courses .hic {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#courses .ic {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: #FF6A00;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* 3 Cards Top + 3 Cards Bottom */
+#courses .cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+/* Course Card */
+#courses .ccard {
+    background: linear-gradient(180deg, #151515 0%, #0d0d0d 100%);
+    border: 1px solid rgba(255, 106, 0, 0.28);
+    border-radius: 20px;
+    padding: 18px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+#courses .ccard:hover {
+    transform: translateY(-6px);
+    border-color: #FF6A00;
+    box-shadow: 0 8px 25px rgba(255, 106, 0, 0.15);
+}
+
+/* Course Image */
+#courses .cthumb {
+    width: 100%;
+    height: 185px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+#courses .cthumb img {
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Course Title */
+#courses .ccard h3 {
+    color: #fff;
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 1.5;
+    min-height: 58px;
+    margin: 5px 0 15px;
+}
+
+/* Course Type and Seats */
+#courses .ctype,
+#courses .seats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    color: #ddd;
+    font-size: 14px;
+    margin: 7px 0;
+}
+
+#courses .ctype b {
+    color: #FF6A00;
+}
+
+#courses .ctype .ic,
+#courses .seats .ic {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+#courses .seats {
+    color: #FF6A00;
+    font-weight: 600;
+}
+
+/* Know More Button */
+#courses .btn-ink {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #FF6A00;
+    color: #fff;
+    padding: 11px 22px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: 700;
+    margin-top: 18px;
+    transition: all 0.3s ease;
+}
+
+#courses .btn-ink:hover {
+    background: #fff;
+    color: #111;
+}
+
+#courses .btn-ink .ic {
+    stroke: currentColor;
+}
+
+/* Tablet: 2 Cards Per Row */
+@media (max-width: 992px) {
+    #courses .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+}
+
+/* Mobile: 1 Card Per Row */
+@media (max-width: 576px) {
+    #courses .wrap {
+        width: 90%;
+    }
+
+    #courses .cards {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    #courses .sec-head h2 {
+        font-size: 23px;
+    }
+
+    #courses .ccard h3 {
+        font-size: 18px;
+    }
+
+    #courses .cthumb {
+        height: 160px;
+    }
+}
+
+/* RECORDED COURSES - SAME 3 + 3 GRID */
+#courses .recorded-courses {
+    margin-top: 60px;
+}
+
+#courses .recorded-courses .sec-head {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#courses .recorded-courses .cards {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 25px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+    #courses .recorded-courses .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    #courses .recorded-courses .cards {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+}
+</style>
+
+<section id="courses">
+    <div class="wrap">
+
+        <div class="sec-head">
+            <h2>
+                <span class="hic">
+                    <svg class="ic" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M23 7l-7 5 7 5z"/>
+                        <rect x="1" y="5" width="15" height="14" rx="2"/>
+                    </svg>
+                </span>
+                Live Courses in Telugu
+            </h2>
+        </div>
+
+<ul class="cards" aria-label="Live courses in Telugu">
+
+    <!-- 1. Python -->
+    <li class="ccard glass spot">
+        <div class="cthumb">
+            <img src="https://pythonlife.in/images/pythonlogo.png"
+                 alt="FullStack Python Development with AI" loading="lazy">
+        </div>
+
+        <h3>FullStack Python Development with AI</h3>
+
+        <p class="ctype">
+            <svg class="ic" viewBox="0 0 24 24">
+                <path d="M23 7l-7 5 7 5z"/>
+                <rect x="1" y="5" width="15" height="14" rx="2"/>
+            </svg>
+            <span>Course Type: <b>Live</b></span>
+        </p>
+
+        <p class="seats">
+            <span>🔴 Admissions Open</span>
+        </p>
+
+        <a class="btn btn-ink" href="https://pythonlife.in/python-live-course-in-telugu.html">
+            Know More
+            <svg class="ic" viewBox="0 0 24 24">
+                <path d="M5 12h14M13 6l6 6-6 6"/>
+            </svg>
+        </a>
+    </li>
+
+
+    <!-- 2. Graphic Design -->
+    <li class="ccard glass spot">
+        <div class="cthumb">
+            <img src="https://pythonlife.in/images/GD%20%26%20VE%20with%20AI%20(1).png"
+                 alt="Graphic Design and Video Editing with AI" loading="lazy">
+        </div>
+
+        <h3>Graphic Design &amp; Video Editing with AI</h3>
+
+        <p class="ctype">
+            <svg class="ic" viewBox="0 0 24 24">
+                <path d="M23 7l-7 5 7 5z"/>
+                <rect x="1" y="5" width="15" height="14" rx="2"/>
+            </svg>
+            <span>Course Type: <b>Live</b></span>
+        </p>
+
+        <p class="seats">
+            <span>🔴 Admissions Open</span>
+        </p>
+
+        <a class="btn btn-ink" href="https://pythonlife.in/graphic-design-video-editing-ai.html">
+            Know More
+            <svg class="ic" viewBox="0 0 24 24">
+                <path d="M5 12h14M13 6l6 6-6 6"/>
+            </svg>
+        </a>
+    </li>
+
+
+    <!-- 3. DevOps -->
+    <li class="ccard glass spot">
+        <div class="cthumb">
+            <img src="https://pythonlife.in/images/devps%20logo%20in%20course.png"
+                 alt="DevOps and DevSecOps with MultiCloud and AI" loading="lazy">
+        </div>
+
+        <h3>DevOps &amp; DevSecOps with MultiCloud &amp; AI</h3>
+
+        <p class="ctype">
+            <svg class="ic" viewBox="0 0 24 24">
+                <path d="M23 7l-7 5 7 5z"/>
+                <rect x="1" y="5" width="15" height="14" rx="2"/>
+            </svg>
+            <span>Course Type: <b>Live</b></span>
+        </p>
+
+        <p class="seats">
+            <span>🔴 Admissions Open</span>
+        </p>
+
+        <a class="btn btn-ink" href="https://pythonlife.in/devops-with-aws.html">
+            Know More
+            <svg class="ic" viewBox="0 0 24 24">
+                <path d="M5 12h14M13 6l6 6-6 6"/>
+            </svg>
+        </a>
+    </li>
+
+
+    <!-- 4. FullStack AI -->
+    <li class="ccard glass spot">
+        <div class="cthumb">
+            <img src="https://pythonlife.in/images/FS%20AI.png"
+                 alt="FullStack AI with Generative AI and Agentic AI" loading="lazy">
+        </div>
+
+        <h3>FullStack AI with Generative &amp; Agentic AI</h3>
+
+        <p class="ctype">
+            <svg class="ic" viewBox="0 0 24 24">
+                <path d="M23 7l-7 5 7 5z"/>
+                <rect x="1" y="5" width="15" height="14" rx="2"/>
+            </svg>
+            <span>Course Type: <b>Live</b></span>
+        </p>
+
+        <p class="seats">
+            <span>🔴 Admissions Open</span>
+        </p>
+
+        <a class="btn btn-ink" href="https://pythonlife.in/fullstack-Genai-course-in-telugu.html">
+            Know More
+            <svg class="ic" viewBox="0 0 24 24">
+                <path d="M5 12h14M13 6l6 6-6 6"/>
+            </svg>
+        </a>
+    </li>
+
+
+    <!-- 5. Java -->
+    <li class="ccard glass spot">
+        <div class="cthumb">
+            <img src="https://pythonlife.in/images/jai.png"
+                 alt="Basic to Advanced Java Programming with AI" loading="lazy">
+        </div>
+
+        <h3>Basic to Advanced Java Programming with AI</h3>
+
+        <p class="ctype">
+            <svg class="ic" viewBox="0 0 24 24">
+                <path d="M23 7l-7 5 7 5z"/>
+                <rect x="1" y="5" width="15" height="14" rx="2"/>
+            </svg>
+            <span>Course Type: <b>Live</b></span>
+        </p>
+
+        <p class="seats">
+            <span>🔴 Admissions Open</span>
+        </p>
+
+        <a class="btn btn-ink" href="https://pythonlife.in/Java-Programming-Telugu.html">
+            Know More
+            <svg class="ic" viewBox="0 0 24 24">
+                <path d="M5 12h14M13 6l6 6-6 6"/>
+            </svg>
+        </a>
+    </li>
+
+
+    <!-- 6. Data Analytics -->
+    <li class="ccard glass spot">
+        <div class="cthumb">
+            <img src="https://pythonlife.in/images/Data_Analytics_ai.png"
+                 alt="Data Analytics with AI" loading="lazy">
+        </div>
+
+        <h3>Data Analytics with AI</h3>
+
+        <p class="ctype">
+            <svg class="ic" viewBox="0 0 24 24">
+                <path d="M23 7l-7 5 7 5z"/>
+                <rect x="1" y="5" width="15" height="14" rx="2"/>
+            </svg>
+            <span>Course Type: <b>Live</b></span>
+        </p>
+
+        <p class="seats">
+            <span>🔴 Admissions Open</span>
+        </p>
+
+        <a class="btn btn-ink" href="https://pythonlife.in/dataanalyst-in-telugu.html">
+            Know More
+            <svg class="ic" viewBox="0 0 24 24">
+                <path d="M5 12h14M13 6l6 6-6 6"/>
+            </svg>
+        </a>
+    </li>
+
+</ul>
+
+
+    
+    
+    
+    
+    <!-- RECORDED COURSES -->
+<div class="recorded-courses">
+
+    <div class="sec-head sec-head-2">
+        <h2>
+            <span class="hic">
+                <svg class="ic" viewBox="0 0 24 24" aria-hidden="true">
+                    <rect x="2" y="2" width="20" height="20" rx="2.2"/>
+                    <path d="M7 2v20M17 2v20M2 12h20M2 7h5M2 17h5M17 17h5M17 7h5"/>
+                </svg>
+            </span>
+            Recorded Courses in Telugu
+        </h2>
+    </div>
+
+
+    
+    
+ <ul class="cards" aria-label="Recorded courses in Telugu">
+
+    <!-- 1. Python -->
+    <li class="ccard glass spot">
+        <div class="cthumb">
+            <img src="https://pythonlife.in/images/pythonlogo.png"
+                 alt="FullStack Python with GenAI" loading="lazy">
+        </div>
+
+        <h3>FullStack Python with GenAI</h3>
+
+        <p class="ctype">
+            <svg class="ic" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="2.2"/>
+                <path d="M7 2v20M17 2v20M2 12h20M2 7h5M2 17h5M17 17h5M17 7h5"/>
+            </svg>
+            <span>Course Type: <b>Recorded</b></span>
+        </p>
+
+        <p class="seats">
+            <svg class="ic" viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="9"/>
+                <path d="M12 7v5l3 2"/>
+            </svg>
+            <span>Start Anytime</span>
+        </p>
+
+        <a class="btn btn-ink"
+           href="https://pythonlife.in/python-course-in-telugu.html">
+            Know More
+            <svg class="ic" viewBox="0 0 24 24">
+                <path d="M5 12h14M13 6l6 6-6 6"/>
+            </svg>
+        </a>
+    </li>
+
+
+    <!-- 2. Java -->
+    <li class="ccard glass spot">
+        <div class="cthumb">
+            <img src="https://pythonlife.in/images/java.png"
+                 alt="Basic to Advanced Java Programming" loading="lazy">
+        </div>
+
+        <h3>Basic to Advanced Java Programming</h3>
+
+        <p class="ctype">
+            <svg class="ic" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="2.2"/>
+                <path d="M7 2v20M17 2v20M2 12h20M2 7h5M2 17h5M17 17h5M17 7h5"/>
+            </svg>
+            <span>Course Type: <b>Recorded</b></span>
+        </p>
+
+        <p class="seats">
+            <svg class="ic" viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="9"/>
+                <path d="M12 7v5l3 2"/>
+            </svg>
+            <span>Start Anytime</span>
+        </p>
+
+        <a class="btn btn-ink"
+           href="https://pythonlife.in/Java-Programming-Telugu-Rec.html">
+            Know More
+            <svg class="ic" viewBox="0 0 24 24">
+                <path d="M5 12h14M13 6l6 6-6 6"/>
+            </svg>
+        </a>
+    </li>
+
+
+    <!-- 3. SQL -->
+    <li class="ccard glass spot">
+        <div class="cthumb">
+            <img src="https://pythonlife.in/images/sql.png"
+                 alt="Basic to Advanced SQL and PL SQL" loading="lazy">
+        </div>
+
+        <h3>Basic to Advanced SQL &amp; PL/SQL</h3>
+
+        <p class="ctype">
+            <svg class="ic" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="2.2"/>
+                <path d="M7 2v20M17 2v20M2 12h20M2 7h5M2 17h5M17 17h5M17 7h5"/>
+            </svg>
+            <span>Course Type: <b>Recorded</b></span>
+        </p>
+
+        <p class="seats">
+            <svg class="ic" viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="9"/>
+                <path d="M12 7v5l3 2"/>
+            </svg>
+            <span>Start Anytime</span>
+        </p>
+
+        <a class="btn btn-ink"
+           href="https://pythonlife.in/oracle.html">
+            Know More
+            <svg class="ic" viewBox="0 0 24 24">
+                <path d="M5 12h14M13 6l6 6-6 6"/>
+            </svg>
+        </a>
+    </li>
+
+
+    <!-- 4. DevOps -->
+    <li class="ccard glass spot">
+        <div class="cthumb">
+            <img src="https://pythonlife.in/images/devps%20logo%20in%20course.png"
+                 alt="DevOps and SecOps with AWS and AI" loading="lazy">
+        </div>
+
+        <h3>DevOps &amp; SecOps with AWS &amp; AI</h3>
+
+        <p class="ctype">
+            <svg class="ic" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="2.2"/>
+                <path d="M7 2v20M17 2v20M2 12h20M2 7h5M2 17h5M17 17h5M17 7h5"/>
+            </svg>
+            <span>Course Type: <b>Recorded</b></span>
+        </p>
+
+        <p class="seats">
+            <svg class="ic" viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="9"/>
+                <path d="M12 7v5l3 2"/>
+            </svg>
+            <span>Start Anytime</span>
+        </p>
+
+        <a class="btn btn-ink"
+           href="https://pythonlife.in/devops-with-gcp.html">
+            Know More
+            <svg class="ic" viewBox="0 0 24 24">
+                <path d="M5 12h14M13 6l6 6-6 6"/>
+            </svg>
+        </a>
+    </li>
+
+</ul>   
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+<section class="work" aria-labelledby="work-h">
+  <div class="wrap">
+
+    <div class="sec-head">
+      <h2 id="work-h">
+        <span class="hic">
+          <svg class="ic" viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="2" y="7" width="20" height="14" rx="2"/>
+            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+          </svg>
+        </span>
+        Our students work at
+      </h2>
+    </div>
+
+    <div class="logos-panel glass spot">
+      <div class="logos-slider">
+
+        <!-- Original logos -->
+        <div class="logos-track">
+          <img src="https://pythonlife.in/images/c1.jpg" alt="Company 1" loading="lazy">
+          <img src="https://pythonlife.in/images/c2.jpg" alt="Company 2" loading="lazy">
+          <img src="https://pythonlife.in/images/c3.jpg" alt="Company 3" loading="lazy">
+          <img src="https://pythonlife.in/images/c4.jpg" alt="Company 4" loading="lazy">
+          <img src="https://pythonlife.in/images/c5.jpg" alt="Company 5" loading="lazy">
+          <img src="https://pythonlife.in/images/c6.jpg" alt="Company 6" loading="lazy">
+          <img src="https://pythonlife.in/images/c7.jpg" alt="Company 7" loading="lazy">
+          <img src="https://pythonlife.in/images/c8.jpg" alt="Company 8" loading="lazy">
+          <img src="https://pythonlife.in/images/c9.jpg" alt="Company 9" loading="lazy">
+          <img src="https://pythonlife.in/images/c10.jpg" alt="Company 10" loading="lazy">
+          <img src="https://pythonlife.in/images/c11.jpg" alt="Company 11" loading="lazy">
+          <img src="https://pythonlife.in/images/c12.jpg" alt="Company 12" loading="lazy">
+          <img src="https://pythonlife.in/images/c13.jpg" alt="Company 13" loading="lazy">
+          <img src="https://pythonlife.in/images/c14.jpg" alt="Company 14" loading="lazy">
+          <img src="https://pythonlife.in/images/c15.jpg" alt="Company 15" loading="lazy">
+          <img src="https://pythonlife.in/images/c16.jpg" alt="Company 16" loading="lazy">
+        </div>
+
+        <!-- Duplicate logos for a seamless loop -->
+        <div class="logos-track" aria-hidden="true">
+          <img src="https://pythonlife.in/images/c1.jpg" alt="">
+          <img src="https://pythonlife.in/images/c2.jpg" alt="">
+          <img src="https://pythonlife.in/images/c3.jpg" alt="">
+          <img src="https://pythonlife.in/images/c4.jpg" alt="">
+          <img src="https://pythonlife.in/images/c5.jpg" alt="">
+          <img src="https://pythonlife.in/images/c6.jpg" alt="">
+          <img src="https://pythonlife.in/images/c7.jpg" alt="">
+          <img src="https://pythonlife.in/images/c8.jpg" alt="">
+          <img src="https://pythonlife.in/images/c9.jpg" alt="">
+          <img src="https://pythonlife.in/images/c10.jpg" alt="">
+          <img src="https://pythonlife.in/images/c11.jpg" alt="">
+          <img src="https://pythonlife.in/images/c12.jpg" alt="">
+          <img src="https://pythonlife.in/images/c13.jpg" alt="">
+          <img src="https://pythonlife.in/images/c14.jpg" alt="">
+          <img src="https://pythonlife.in/images/c15.jpg" alt="">
+          <img src="https://pythonlife.in/images/c16.jpg" alt="">
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- =========================================
+     WHY PYTHONLIFE SECTION
+========================================= -->
+
+<section class="pl-why" id="why-pythonlife">
+
+    <div class="pl-why-container">
+
+        <!-- =========================
+             HEADER
+        ========================== -->
+
+        <div class="pl-why-header">
+
+            <div class="pl-why-label">
+                WHY PYTHONLIFE?
+            </div>
+
+            <h2>
+                Learn with clarity.
+                <span>Build with purpose.</span>
+            </h2>
+
+            <p>
+                Practical technology learning designed to help you
+                understand, build, and keep growing.
+            </p>
+
+        </div>
+
+
+        <!-- =========================
+             FEATURE GRID
+        ========================== -->
+
+        <div class="pl-why-grid">
+
+
+            <!-- 01 -->
+            <div class="pl-why-card">
+
+                <span class="pl-why-number">01</span>
+
+                <div class="pl-why-content">
+
+                    <h3>
+                        Learn in Telugu
+                    </h3>
+
+                    <p>
+                        Understand technology without the complexity.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- 02 -->
+            <div class="pl-why-card">
+
+                <span class="pl-why-number">02</span>
+
+                <div class="pl-why-content">
+
+                    <h3>
+                        Build Practically
+                    </h3>
+
+                    <p>
+                        Learn through coding, projects, and practice.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- 03 -->
+            <div class="pl-why-card">
+
+                <span class="pl-why-number">03</span>
+
+                <div class="pl-why-content">
+
+                    <h3>
+                        Stay Relevant
+                    </h3>
+
+                    <p>
+                        Learn modern technologies and AI skills.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- 04 -->
+            <div class="pl-why-card">
+
+                <span class="pl-why-number">04</span>
+
+                <div class="pl-why-content">
+
+                    <h3>
+                        Build Confidence
+                    </h3>
+
+                    <p>
+                        Strengthen skills for real-world opportunities.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- 05 -->
+            <div class="pl-why-card">
+
+                <span class="pl-why-number">05</span>
+
+                <div class="pl-why-content">
+
+                    <h3>
+                        One Learning Ecosystem
+                    </h3>
+
+                    <p>
+                        Courses, projects, guidance, and resources.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- 06 -->
+            <div class="pl-why-card">
+
+                <span class="pl-why-number">06</span>
+
+                <div class="pl-why-content">
+
+                    <h3>
+                        Keep Growing
+                    </h3>
+
+                    <p>
+                        Keep learning as technology evolves.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             BOTTOM MESSAGE
+        ========================== -->
+
+        <div class="pl-why-bottom">
+
+            <div class="pl-why-message">
+
+                <span>
+                    Our career does not change overnight.
+                </span>
+
+                <strong>
+                    It changes when your skills improve consistently.
+                </strong>
+
+            </div>
+
+
+            <a href="#courses" class="pl-why-button">
+
+                Explore Courses
+
+                <span>→</span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<style>
+
+/* =========================================
+   WHY PYTHONLIFE
+========================================= */
+
+.pl-why {
+
+    --pl-black: #050505;
+
+    --pl-card: #0d0d0d;
+
+    --pl-card-hover: #111111;
+
+    --pl-border: #242424;
+
+    --pl-white: #ffffff;
+
+    --pl-gray: #999999;
+
+    --pl-orange: #c65a18;
+
+    --pl-orange-light: #df6b22;
+
+
+    position: relative;
+
+    width: 100%;
+
+    padding: 95px 20px;
+
+    background: var(--pl-black);
+
+    color: var(--pl-white);
+
+    overflow: hidden;
+
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.pl-why-container {
+
+    width: 100%;
+
+    max-width: 1180px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.pl-why-header {
+
+    max-width: 800px;
+
+    margin-bottom: 55px;
+}
+
+
+.pl-why-label {
+
+    display: inline-block;
+
+    margin-bottom: 16px;
+
+    color: var(--pl-orange);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2.5px;
+
+    text-transform: uppercase;
+}
+
+
+.pl-why-header h2 {
+
+    margin: 0;
+
+    color: var(--pl-white);
+
+    font-size: clamp(38px, 5vw, 62px);
+
+    line-height: 1.05;
+
+    letter-spacing: -2px;
+
+    font-weight: 700;
+}
+
+
+.pl-why-header h2 span {
+
+    color: var(--pl-orange);
+}
+
+
+.pl-why-header p {
+
+    max-width: 620px;
+
+    margin: 20px 0 0;
+
+    color: var(--pl-gray);
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    font-weight: 400;
+}
+
+
+/* =========================================
+   FEATURE GRID
+========================================= */
+
+.pl-why-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 1px;
+
+    background: var(--pl-border);
+
+    border: 1px solid var(--pl-border);
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.pl-why-card {
+
+    position: relative;
+
+    display: flex;
+
+    gap: 25px;
+
+    min-height: 190px;
+
+    padding: 32px;
+
+    background: var(--pl-card);
+
+    overflow: hidden;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* Orange top line */
+
+.pl-why-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 0;
+
+    height: 2px;
+
+    background: var(--pl-orange);
+
+    transition:
+        width 0.35s ease;
+}
+
+
+/* Hover */
+
+.pl-why-card:hover {
+
+    background: var(--pl-card-hover);
+
+    transform: translateY(-3px);
+
+    z-index: 2;
+}
+
+
+.pl-why-card:hover::before {
+
+    width: 100%;
+}
+
+
+/* =========================================
+   NUMBER
+========================================= */
+
+.pl-why-number {
+
+    flex-shrink: 0;
+
+    padding-top: 4px;
+
+    color: var(--pl-orange);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.pl-why-content {
+
+    flex: 1;
+}
+
+
+.pl-why-card h3 {
+
+    margin: 0 0 9px;
+
+    color: var(--pl-white);
+
+    font-size: 20px;
+
+    line-height: 1.3;
+
+    font-weight: 600;
+
+    letter-spacing: -0.3px;
+}
+
+
+.pl-why-card p {
+
+    margin: 0;
+
+    color: var(--pl-gray);
+
+    font-size: 14px;
+
+    line-height: 1.65;
+}
+
+
+/* =========================================
+   BOTTOM MESSAGE
+========================================= */
+
+.pl-why-bottom {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 40px;
+
+    margin-top: 50px;
+
+    padding-top: 40px;
+
+    border-top: 1px solid var(--pl-border);
+}
+
+
+.pl-why-message {
+
+    max-width: 720px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+.pl-why-message span {
+
+    color: var(--pl-white);
+
+    font-size: 22px;
+
+    line-height: 1.4;
+
+    font-weight: 500;
+}
+
+
+.pl-why-message strong {
+
+    color: var(--pl-orange);
+
+    font-size: 22px;
+
+    line-height: 1.4;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.pl-why-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    padding: 13px 22px;
+
+    background: var(--pl-orange);
+
+    border: 1px solid var(--pl-orange);
+
+    color: var(--pl-white);
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.pl-why-button span {
+
+    font-size: 18px;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.pl-why-button:hover {
+
+    background: var(--pl-orange-light);
+
+    border-color: var(--pl-orange-light);
+
+    transform: translateY(-2px);
+}
+
+
+.pl-why-button:hover span {
+
+    transform: translateX(5px);
+}
+
+
+/* =========================================
+   DESKTOP CARD CORNERS
+========================================= */
+
+.pl-why-card:nth-child(1) {
+
+    border-top-left-radius: 2px;
+}
+
+
+.pl-why-card:nth-child(3) {
+
+    border-top-right-radius: 2px;
+}
+
+
+.pl-why-card:nth-child(4) {
+
+    border-bottom-left-radius: 2px;
+}
+
+
+.pl-why-card:nth-child(6) {
+
+    border-bottom-right-radius: 2px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .pl-why {
+
+        padding: 80px 18px;
+    }
+
+
+    .pl-why-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .pl-why-card {
+
+        min-height: 180px;
+
+        padding: 28px;
+    }
+
+
+    .pl-why-bottom {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 25px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .pl-why {
+
+        padding: 65px 15px;
+    }
+
+
+    .pl-why-header {
+
+        margin-bottom: 38px;
+    }
+
+
+    .pl-why-label {
+
+        font-size: 10px;
+
+        letter-spacing: 2px;
+    }
+
+
+    .pl-why-header h2 {
+
+        font-size: 38px;
+
+        line-height: 1.08;
+
+        letter-spacing: -1.5px;
+    }
+
+
+    .pl-why-header p {
+
+        margin-top: 18px;
+
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+
+    .pl-why-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .pl-why-card {
+
+        min-height: auto;
+
+        padding: 27px 24px;
+    }
+
+
+    .pl-why-card h3 {
+
+        font-size: 19px;
+    }
+
+
+    .pl-why-card p {
+
+        font-size: 13px;
+
+        line-height: 1.65;
+    }
+
+
+    .pl-why-bottom {
+
+        margin-top: 40px;
+
+        padding-top: 30px;
+
+        gap: 25px;
+    }
+
+
+    .pl-why-message {
+
+        width: 100%;
+    }
+
+
+    .pl-why-message span,
+    .pl-why-message strong {
+
+        font-size: 19px;
+
+        line-height: 1.45;
+    }
+
+
+    .pl-why-button {
+
+        width: 100%;
+
+        padding: 14px 20px;
+    }
+
+}
+
+
+/* =========================================
+   VERY SMALL DEVICES
+========================================= */
+
+@media (max-width: 380px) {
+
+    .pl-why-header h2 {
+
+        font-size: 34px;
+    }
+
+
+    .pl-why-card {
+
+        padding: 24px 20px;
+    }
+
+
+    .pl-why-card h3 {
+
+        font-size: 18px;
+    }
+
+
+    .pl-why-message span,
+    .pl-why-message strong {
+
+        font-size: 18px;
+    }
+
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .pl-why-card,
+    .pl-why-button,
+    .pl-why-card::before,
+    .pl-why-button span {
+
+        transition: none;
+    }
+
+}
+
+</style>
+
+
+
+<script>
+
+/* =========================================
+   WHY PYTHONLIFE
+   SUBTLE SCROLL REVEAL
+========================================= */
+
+(function () {
+
+    const section =
+        document.querySelector("#why-pythonlife");
+
+    if (!section) return;
+
+
+    const cards =
+        section.querySelectorAll(".pl-why-card");
+
+
+    /* Disable animation for reduced motion */
+
+    if (
+        window.matchMedia(
+            "(prefers-reduced-motion: reduce)"
+        ).matches
+    ) {
+
+        return;
+
+    }
+
+
+    /* Check browser support */
+
+    if (!("IntersectionObserver" in window)) {
+
+        return;
+
+    }
+
+
+    /* Initial state */
+
+    cards.forEach(function (card, index) {
+
+        card.style.opacity = "0";
+
+        card.style.transform =
+            "translateY(20px)";
+
+        card.style.transition =
+            `opacity 0.5s ease ${index * 0.06}s,
+             transform 0.5s ease ${index * 0.06}s,
+             background 0.3s ease`;
+
+    });
+
+
+    /* Observer */
+
+    const observer =
+        new IntersectionObserver(
+
+            function (entries) {
+
+                entries.forEach(function (entry) {
+
+                    if (!entry.isIntersecting) {
+
+                        return;
+
+                    }
+
+
+                    entry.target.style.opacity = "1";
+
+                    entry.target.style.transform =
+                        "translateY(0)";
+
+
+                    observer.unobserve(
+                        entry.target
+                    );
+
+                });
+
+            },
+
+            {
+                threshold: 0.12,
+
+                rootMargin:
+                    "0px 0px -40px 0px"
+            }
+
+        );
+
+
+    cards.forEach(function (card) {
+
+        observer.observe(card);
+
+    });
+
+})();
+
+</script>
+
+<!-- =========================================
+     END WHY PYTHONLIFE SECTION
+========================================= -->
+
+  <section class="stats" aria-labelledby="stats-h">
+    <div class="wrap">
+      <div class="stats-head">
+        <span class="rv-eyebrow"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 01-10 0zM7 6H4a3 3 0 003 4M17 6h3a3 3 0 01-3 4"/></svg>Our impact</span>
+        <h2 id="stats-h">Our Proven <span>Track Record</span></h2>
+        <p>With a legacy of excellence, we take pride in our student success stories and trusted industry presence. Here&rsquo;s a glimpse of our journey.</p>
+      </div>
+      <ul class="stat-row" id="statRow" data-src="" aria-live="polite"></ul>
+    </div>
+  </section>
+
+  <section id="reviews" aria-labelledby="rv-h">
+    <div class="wrap">
+      <div class="rv-head">
+        <span class="rv-eyebrow"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8l-6.2 3.3L7 14.2 2 9.3l6.9-1z"/></svg>Student reviews</span>
+        <h2 id="rv-h">Our happy <span>students</span></h2>
+        <p>Real stories from learners who built new skills, landed jobs and changed their careers with PythonLife.</p>
+      </div>
+      <div class="rv-wrap">
+        <div class="rv-track" id="rvTrack" tabindex="0" aria-label="Student reviews"></div>
+        <p class="rv-hint"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3l7.1 17 2.5-7.4L20 10.1z"/></svg>Hover to pause &middot; Click any review to enlarge</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- =========================================================
+     PYTHONLIFE RECENT ACTIVITY POPUP
+     Data is loaded server-side from /api/recent-activity.php.
+     First display: 5 seconds after page load.
+     Repeat: every 30 seconds.
+     Visible: 5 seconds.
+========================================================= -->
+<style>
+.pl-premium-popup{position:fixed;left:18px;bottom:18px;width:330px;max-width:calc(100vw - 28px);display:flex;align-items:center;gap:10px;padding:11px 12px;background:linear-gradient(145deg,rgba(22,22,22,.97),rgba(8,8,8,.98));border:1px solid rgba(255,105,0,.25);border-radius:13px;box-shadow:0 12px 35px rgba(0,0,0,.45),0 0 25px rgba(255,105,0,.06);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);z-index:999999;opacity:0;visibility:hidden;transform:translateY(18px) scale(.97);transition:opacity .35s ease,transform .35s ease,visibility .35s ease;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;overflow:hidden}
+.pl-premium-popup.pl-premium-show{opacity:1;visibility:visible;transform:translateY(0) scale(1)}
+.pl-premium-popup::before{content:"";position:absolute;top:0;left:0;width:100%;height:2px;background:linear-gradient(90deg,transparent,#ff6900,#ff8a3d,#ff6900,transparent)}
+.pl-popup-glow{position:absolute;width:80px;height:80px;left:-35px;top:-35px;background:#ff6900;opacity:.06;filter:blur(30px);pointer-events:none}
+.pl-premium-icon{position:relative;width:34px;height:34px;min-width:34px;display:flex;align-items:center;justify-content:center;background:rgba(255,105,0,.10);border:1px solid rgba(255,105,0,.24);border-radius:50%;color:#ff6900}
+.pl-premium-icon svg{width:16px;height:16px;display:block}
+.pl-premium-content{min-width:0;flex:1}
+.pl-premium-top{display:flex;align-items:center;gap:6px;margin-bottom:3px}
+.pl-premium-badge{color:#ff6900;font-size:8px;font-weight:800;letter-spacing:.7px;line-height:1.2;white-space:nowrap}
+.pl-live-dot{width:5px;height:5px;border-radius:50%;background:#ff6900;box-shadow:0 0 7px rgba(255,105,0,.6);animation:plLivePulse 1.8s ease-in-out infinite}
+@keyframes plLivePulse{0%,100%{opacity:.5;transform:scale(.85)}50%{opacity:1;transform:scale(1)}}
+.pl-premium-message{color:#eee;font-size:11.5px;font-weight:500;line-height:1.45;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.pl-premium-time{margin-top:3px;color:#666;font-size:9px;line-height:1.2}
+.pl-premium-close{width:22px;height:22px;min-width:22px;display:flex;align-items:center;justify-content:center;padding:0;margin:-2px -2px 0 0;border:0;border-radius:50%;background:transparent;color:#666;cursor:pointer;transition:color .2s ease,background .2s ease,transform .2s ease}
+.pl-premium-close:hover{color:#fff;background:rgba(255,255,255,.07);transform:rotate(90deg)}
+.pl-premium-close svg{width:12px;height:12px;display:block}
+.pl-premium-progress{position:absolute;left:0;bottom:0;width:100%;height:2px;background:rgba(255,255,255,.04)}
+.pl-premium-progress-bar{width:100%;height:100%;background:linear-gradient(90deg,#ff6900,#ff8a3d);transform-origin:left}
+.pl-premium-popup.pl-premium-show .pl-premium-progress-bar{animation:plPremiumProgress 5s linear forwards}
+@keyframes plPremiumProgress{from{transform:scaleX(1)}to{transform:scaleX(0)}}
+@media(max-width:768px){.pl-premium-popup{left:14px;bottom:14px;width:300px;padding:10px 11px;gap:9px;border-radius:12px}.pl-premium-icon{width:32px;height:32px;min-width:32px}.pl-premium-icon svg{width:15px;height:15px}.pl-premium-message{font-size:11px}}
+@media(max-width:480px){.pl-premium-popup{left:10px;right:10px;bottom:10px;width:auto;max-width:none;padding:9px 10px;gap:8px;border-radius:11px}.pl-premium-icon{width:30px;height:30px;min-width:30px}.pl-premium-icon svg{width:14px;height:14px}.pl-premium-badge{font-size:7.5px}.pl-premium-message{font-size:10.5px;line-height:1.4}.pl-premium-time{font-size:8.5px;margin-top:2px}.pl-premium-close{width:20px;height:20px;min-width:20px}.pl-premium-close svg{width:11px;height:11px}}
+@media(max-width:360px){.pl-premium-popup{left:8px;right:8px;bottom:8px;padding:8px 9px}.pl-premium-icon{width:28px;height:28px;min-width:28px}.pl-premium-message{font-size:10px}}
+@media(prefers-reduced-motion:reduce){.pl-premium-popup{transition:none}.pl-premium-popup.pl-premium-show .pl-premium-progress-bar{animation:none}.pl-live-dot{animation:none}}
+</style>
+
+<div id="plPremiumPopup" class="pl-premium-popup" role="status" aria-live="polite" aria-atomic="true">
+  <div class="pl-popup-glow"></div>
+  <div class="pl-premium-icon" aria-hidden="true">
+    <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </div>
+  <div class="pl-premium-content">
+    <div class="pl-premium-top"><span class="pl-premium-badge">RECENTLY ENROLLED</span><span class="pl-live-dot" aria-hidden="true"></span></div>
+    <div id="plPremiumMessage" class="pl-premium-message">Loading recent activity...</div>
+    <div id="plPremiumTime" class="pl-premium-time">Just now</div>
+  </div>
+  <button type="button" id="plPremiumClose" class="pl-premium-close" aria-label="Close notification">
+    <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+  </button>
+  <div class="pl-premium-progress" aria-hidden="true"><div class="pl-premium-progress-bar"></div></div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var popup=document.getElementById("plPremiumPopup");
+  var message=document.getElementById("plPremiumMessage");
+  var time=document.getElementById("plPremiumTime");
+  var close=document.getElementById("plPremiumClose");
+  var timer=null;
+  var hideTimer=null;
+  var started=false;
+  var endpoint="/api/recent-activity.php";
+
+  if(!popup||!message||!time){return;}
+
+  function hide(){
+    popup.classList.remove("pl-premium-show");
+    if(hideTimer){clearTimeout(hideTimer);hideTimer=null;}
+  }
+
+  function show(){
+    if(document.hidden){return;}
+    fetch(endpoint+"?t="+Date.now(),{method:"GET",cache:"no-store",headers:{"Accept":"application/json"}})
+      .then(function(response){if(!response.ok){throw new Error("Recent activity request failed");}return response.json();})
+      .then(function(result){
+        if(!result||!result.success||!result.data){return;}
+        var item=result.data;
+        message.textContent=item.name+" from "+item.location+" enrolled in "+item.course;
+        time.textContent=item.time||"Recently";
+        popup.classList.remove("pl-premium-show");
+        void popup.offsetWidth;
+        requestAnimationFrame(function(){popup.classList.add("pl-premium-show");});
+        if(hideTimer){clearTimeout(hideTimer);}
+        hideTimer=setTimeout(hide,5000);
+      })
+      .catch(function(error){console.error("Recent activity error:",error);});
+  }
+
+  function start(){
+    if(started){return;}
+    started=true;
+    show();
+    timer=setInterval(show,30000);
+  }
+
+  if(close){close.addEventListener("click",hide);}
+
+  setTimeout(start,5000);
+
+  document.addEventListener("visibilitychange",function(){
+    if(document.hidden){
+      if(timer){clearInterval(timer);timer=null;}
+    }else if(started&&!timer){
+      show();
+      timer=setInterval(show,30000);
+    }
+  });
+})();
+</script>
+
+<footer class="pl-footer" id="site-footer">
+  <div class="pl-footer-container">
+    <div class="pl-footer-grid">
+
+      <div class="pl-footer-about">
+        <a href="/" class="pl-footer-logo" aria-label="PythonLife Home">
+          <img src="images/logo.png" alt="PythonLife Logo">
+        </a>
+        <p>
+          PythonLife is a Telugu-first EdTech platform dedicated to making technology learning simple,
+          practical, and career-focused. Since 2020, we have helped students and professionals learn
+          in-demand technologies including Python, Data Science, AI, Machine Learning, Generative AI,
+          Agentic AI, DevOps, SQL, Java, and Power BI through practical, industry-oriented training.
+        </p>
+      </div>
+
+      <div class="pl-footer-column">
+        <h3>Follow Us</h3>
+        <span class="pl-footer-divider"></span>
+        <div class="pl-footer-social">
+          <a href="https://www.instagram.com/pythonlifetelugu/" target="_blank" rel="noopener noreferrer" class="pl-social-link">
+            <span class="pl-social-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor"/></svg></span>
+            <span>Instagram</span>
+          </a>
+          <a href="https://youtube.com/c/PythonLifetelugu" target="_blank" rel="noopener noreferrer" class="pl-social-link">
+            <span class="pl-social-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21.2 7.2a2.8 2.8 0 0 0-2-2C17.4 4.7 12 4.7 12 4.7s-5.4 0-7.2.5a2.8 2.8 0 0 0-2 2C2.3 9 2.3 12 2.3 12s0 3 .5 4.8a2.8 2.8 0 0 0 2 2c1.8.5 7.2.5 7.2.5s5.4 0 7.2-.5a2.8 2.8 0 0 0 2-2c.5-1.8.5-4.8.5-4.8s0-3-.5-4.8Z" fill="currentColor"/><path d="M10 9v6l5-3-5-3Z" fill="#050505"/></svg></span>
+            <span>YouTube</span>
+          </a>
+          <a href="https://www.linkedin.com/in/kiran-sagar-a00a761b2" target="_blank" rel="noopener noreferrer" class="pl-social-link">
+            <span class="pl-social-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2" fill="currentColor"/><rect x="7" y="10" width="2" height="7" fill="#050505"/><circle cx="8" cy="7.5" r="1.1" fill="#050505"/><path d="M12 10h2v1c.6-.8 1.5-1.3 2.6-1.3 2 0 2.9 1.2 2.9 3.6V17h-2v-3.4c0-1.2-.4-2-1.4-2-1 0-1.6.7-1.6 2V17h-2v-7Z" fill="#050505"/></svg></span>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://t.me/python_life_telugu" target="_blank" rel="noopener noreferrer" class="pl-social-link">
+            <span class="pl-social-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21.4 4.6 18.2 20c-.2 1.1-.8 1.4-1.7.9l-4.7-3.5-2.3 2.2c-.3.3-.5.5-1 .5l.4-4.8 8.8-8c.4-.4-.1-.6-.6-.2L6.2 14.1l-4.6-1.4c-1-.3-1-1 .2-1.5L20 4.1c.8-.3 1.6.2 1.4.5Z" fill="currentColor"/></svg></span>
+            <span>Telegram</span>
+          </a>
+          <a href="https://github.com/kiransagar1" target="_blank" rel="noopener noreferrer" class="pl-social-link">
+            <span class="pl-social-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2.5a9.7 9.7 0 0 0-3.1 18.9c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 0 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.6.3-1.1.6-1.3-2.2-.3-4.5-1.1-4.5-4.9 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.7 1a9.5 9.5 0 0 1 4.9 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.8-2.3 4.6-4.5 4.9.4.3.7.9.7 1.8v2.7c0 .3.2.6.7.5A9.7 9.7 0 0 0 12 2.5Z" fill="currentColor"/></svg></span>
+            <span>GitHub</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="pl-footer-column">
+        <h3>Courses</h3>
+        <span class="pl-footer-divider"></span>
+        <ul class="pl-footer-list">
+          <li><a href="python-live-course-in-telugu.html">FullStack Python Development with AI</a></li>
+          <li><a href="Genai-course-in-telugu.html">Generative AI &amp; Agentic AI</a></li>
+          <li><a href="data-science.html">FullStack DataScience with GenAI</a></li>
+          <li><a href="oracle-live.html">Beginner to Advanced SQL &amp; PL/SQL</a></li>
+          <li><a href="devops-with-aws.html">DevOps &amp; DevSecOps with AWS &amp; AI</a></li>
+          <li><a href="python-course-in-telugu.html">FullStack Python Programming (Rec)</a></li>
+          <li><a href="Java-Programming-Telugu-Rec.html">Basic to Advanced Java Programming</a></li>
+          <li><a href="oracle.html">Basic to Advanced SQL &amp; PL/SQL (Rec)</a></li>
+          <li><a href="devops-with-gcp.html">DevOps &amp; DevSecOps AWS (Rec)</a></li>
+        </ul>
+      </div>
+
+      <div class="pl-footer-column">
+        <h3>Quick Links</h3>
+        <span class="pl-footer-divider"></span>
+        <ul class="pl-footer-list">
+          <li><a href="/">Home</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms-and-conditions.html">Terms and Conditions</a></li>
+          <li><a href="refund-policy.html">Refund Policy</a></li>
+        </ul>
+        <div class="pl-footer-contact">
+          <span>Need help?</span>
+          <a href="contact.html">Contact Us <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pl-footer-bottom">
+      <p>Copyright &copy; 2026 <strong>PythonLife</strong>. All Rights Reserved.</p>
+      <div class="pl-footer-legal">
+        <a href="privacy-policy.html">Privacy</a><span>•</span>
+        <a href="terms-and-conditions.html">Terms</a><span>•</span>
+        <a href="refund-policy.html">Refund Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+/* ================================
+   PYTHONLIFE FULL-WIDTH FOOTER
+================================ */
+.pl-footer,
+.pl-footer *,
+.pl-footer *::before,
+.pl-footer *::after{box-sizing:border-box}
+.pl-footer{
+  width:100vw;
+  max-width:none;
+  margin-left:calc(50% - 50vw);
+  margin-right:calc(50% - 50vw);
+  padding:72px 0 0;
+  background:
+    radial-gradient(circle at 12% 18%,rgba(255,105,0,.10),transparent 32%),
+    radial-gradient(circle at 90% 80%,rgba(255,105,0,.035),transparent 30%),
+    #050505;
+  border-top:1px solid rgba(255,105,0,.22);
+  color:#fff;
+  overflow:hidden;
+  position:relative;
+}
+.pl-footer::before{
+  content:"";position:absolute;top:0;left:0;width:100%;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(255,105,0,.65),transparent);
+}
+.pl-footer-container{width:100%;max-width:none;margin:0;padding:0 7vw;position:relative;z-index:2}
+.pl-footer-grid{
+  width:100%;display:grid;
+  grid-template-columns:minmax(300px,1.7fr) minmax(170px,.8fr) minmax(250px,1.25fr) minmax(190px,.8fr);
+  gap:65px;align-items:start;
+}
+.pl-footer-about{min-width:0}
+.pl-footer-logo{display:inline-flex;align-items:center;margin-bottom:28px;text-decoration:none;transition:transform .25s ease}
+.pl-footer-logo:hover{transform:translateY(-2px)}
+.pl-footer-logo img{display:block;width:205px;height:auto;max-width:100%}
+.pl-footer-about p{max-width:540px;margin:0;color:#8f8f8f;font-size:15px;line-height:1.9;font-weight:400}
+.pl-footer-column{min-width:0}
+.pl-footer-column h3{margin:0;color:#fff;font-size:20px;line-height:1.3;font-weight:700;letter-spacing:-.3px}
+.pl-footer-divider{display:block;width:46px;height:4px;margin:14px 0 24px;background:#ff6900;border-radius:50px;box-shadow:0 0 12px rgba(255,105,0,.22)}
+.pl-footer-social{display:flex;flex-direction:column;gap:13px}
+.pl-social-link{display:flex;align-items:center;gap:13px;width:max-content;color:#a5a5a5;text-decoration:none;font-size:15px;font-weight:500;transition:color .25s ease,transform .25s ease}
+.pl-social-link:hover{color:#ff6900;transform:translateX(4px)}
+.pl-social-icon{width:44px;height:44px;flex:0 0 44px;display:flex;align-items:center;justify-content:center;background:#151515;border:1px solid #333;border-radius:11px;color:#fff;transition:background .25s ease,border-color .25s ease,color .25s ease,box-shadow .25s ease}
+.pl-social-icon svg{width:21px;height:21px;display:block}
+.pl-social-link:hover .pl-social-icon{background:#ff6900;border-color:#ff6900;color:#fff;box-shadow:0 5px 20px rgba(255,105,0,.22)}
+.pl-footer-list{list-style:none;padding:0;margin:0}
+.pl-footer-list li{margin:0 0 15px}
+.pl-footer-list li:last-child{margin-bottom:0}
+.pl-footer-list li a{display:inline-block;color:#858585;text-decoration:none;font-size:14.5px;line-height:1.55;transition:color .25s ease,transform .25s ease}
+.pl-footer-list li a:hover{color:#ff6900;transform:translateX(4px)}
+.pl-footer-contact{margin-top:30px;padding:20px;background:linear-gradient(135deg,rgba(255,105,0,.10),rgba(255,105,0,.035));border:1px solid rgba(255,105,0,.28);border-radius:16px;transition:border-color .25s ease,transform .25s ease,background .25s ease}
+.pl-footer-contact:hover{border-color:rgba(255,105,0,.55);background:linear-gradient(135deg,rgba(255,105,0,.14),rgba(255,105,0,.045));transform:translateY(-2px)}
+.pl-footer-contact span{display:block;margin-bottom:8px;color:#777;font-size:13px}
+.pl-footer-contact a{display:inline-flex;align-items:center;gap:9px;color:#ff6900;text-decoration:none;font-size:15px;font-weight:700}
+.pl-footer-contact a svg{width:18px;height:18px;transition:transform .2s ease}
+.pl-footer-contact a:hover svg{transform:translateX(4px)}
+.pl-footer-bottom{width:100%;display:flex;justify-content:space-between;align-items:center;gap:30px;margin-top:65px;padding:25px 0;border-top:1px solid rgba(255,255,255,.08)}
+.pl-footer-bottom p{margin:0;color:#626262;font-size:13px;line-height:1.5}
+.pl-footer-bottom strong{color:#929292;font-weight:600}
+.pl-footer-legal{display:flex;align-items:center;justify-content:flex-end;gap:12px;flex-wrap:wrap}
+.pl-footer-legal a{color:#626262;text-decoration:none;font-size:13px;transition:color .2s ease}
+.pl-footer-legal a:hover{color:#ff6900}
+.pl-footer-legal span{color:#3e3e3e;font-size:12px}
+@media (min-width:1600px){.pl-footer-container{padding-left:8vw;padding-right:8vw}.pl-footer-grid{gap:85px}.pl-footer-about p{max-width:600px}}
+@media (max-width:1250px){.pl-footer-container{padding-left:5vw;padding-right:5vw}.pl-footer-grid{grid-template-columns:1.5fr .85fr 1.2fr .85fr;gap:42px}.pl-footer-about p{font-size:14px}.pl-footer-list li a{font-size:14px}}
+@media (max-width:1000px){.pl-footer{padding-top:60px}.pl-footer-container{padding-left:40px;padding-right:40px}.pl-footer-grid{grid-template-columns:1.5fr 1fr 1.2fr;gap:50px}.pl-footer-about{grid-column:span 2}.pl-footer-about p{max-width:700px}}
+@media (max-width:760px){.pl-footer{width:100%;margin-left:0;margin-right:0;padding-top:50px}.pl-footer-container{padding-left:25px;padding-right:25px}.pl-footer-grid{grid-template-columns:1fr;gap:42px}.pl-footer-about{grid-column:auto}.pl-footer-about p{max-width:none;font-size:14px;line-height:1.8}.pl-footer-column h3{font-size:19px}.pl-footer-bottom{flex-direction:column;justify-content:center;text-align:center;margin-top:50px;gap:15px}.pl-footer-legal{justify-content:center}}
+@media (max-width:480px){.pl-footer{padding-top:45px}.pl-footer-container{padding-left:20px;padding-right:20px}.pl-footer-logo{margin-bottom:22px}.pl-footer-logo img{width:175px}.pl-footer-about p{font-size:13.5px}.pl-footer-grid{gap:38px}.pl-footer-column h3{font-size:18px}.pl-footer-divider{width:42px;height:3px;margin-top:12px;margin-bottom:20px}.pl-social-icon{width:42px;height:42px;flex-basis:42px}.pl-social-link{font-size:14px}.pl-footer-list li{margin-bottom:13px}.pl-footer-list li a{font-size:13.5px}.pl-footer-contact{padding:18px;border-radius:14px}.pl-footer-bottom{margin-top:45px;padding:22px 0}.pl-footer-bottom p{font-size:11.5px}.pl-footer-legal{gap:9px}.pl-footer-legal a{font-size:11.5px}}
+@media (max-width:360px){.pl-footer-container{padding-left:16px;padding-right:16px}.pl-footer-logo img{width:160px}.pl-footer-about p{font-size:13px}.pl-footer-contact{padding:16px}}
+@media (prefers-reduced-motion:reduce){.pl-footer *,.pl-footer *::before,.pl-footer *::after{transition:none!important;animation:none!important}}
+</style>
+
+    
+    <!--/*<style>*/-->
+    <!--/*.whatsapp_float{*/-->
+    <!--/*    position:fixed;*/-->
+    <!--/*    bottom:40px;*/-->
+    <!--/*    right:20px;*/-->
+      
+    <!--/*}*/-->
+    <!--/*</style>*/-->
+
+
+<!--<div class="whatsapp_float">-->
+<!--    <a-->
+<!--        href="https://wa.me/919154083255"-->
+<!--        target="_blank"-->
+<!--        rel="noopener noreferrer"-->
+<!--        aria-label="Chat with us on WhatsApp"-->
+<!--    >-->
+<!--        <img-->
+<!--            src="whatsapp.png"-->
+<!--            width="50"-->
+<!--            alt="WhatsApp"-->
+<!--            class="whatsapp_float_btn"-->
+<!--        >-->
+<!--    </a>-->
+<!--</div>-->
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var fine = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+
+  // Mobile menu + dropdowns
+  var burger = $("burger"), nav = $("nav");
+  burger.addEventListener("click", function () {
+    var open = nav.classList.toggle("open");
+    burger.setAttribute("aria-expanded", open);
+  });
+  var dds = nav.querySelectorAll("details");
+  dds.forEach(function (d) {
+    d.addEventListener("toggle", function () {
+      if (d.open) dds.forEach(function (o) { if (o !== d) o.open = false; });
+    });
+  });
+  document.addEventListener("click", function (e) {
+    dds.forEach(function (d) { if (!d.contains(e.target)) d.open = false; });
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") dds.forEach(function (d) { d.open = false; });
+  });
+
+  // Header gets denser glass after scrolling
+  var top = $("top");
+  function onScroll() { top.classList.toggle("scrolled", window.scrollY > 10); }
+  onScroll();
+  window.addEventListener("scroll", onScroll, { passive: true });
+
+  // Orange spotlight that follows the pointer inside glass cards
+  document.querySelectorAll(".spot").forEach(function (el) {
+    el.addEventListener("pointermove", function (e) {
+      var r = el.getBoundingClientRect();
+      el.style.setProperty("--mx", (e.clientX - r.left) + "px");
+      el.style.setProperty("--my", (e.clientY - r.top) + "px");
+    });
+  });
+
+  // Backdrop glow drifts with the pointer; code window tilts toward it
+  var blobs = document.querySelector(".blobs"), code = $("code");
+  if (!reduce && fine) {
+    window.addEventListener("pointermove", function (e) {
+      blobs.style.setProperty("--px", ((e.clientX / window.innerWidth) - 0.5) * 2);
+      blobs.style.setProperty("--py", ((e.clientY / window.innerHeight) - 0.5) * 2);
+    }, { passive: true });
+    code.addEventListener("pointermove", function (e) {
+      var r = code.getBoundingClientRect();
+      var x = (e.clientX - r.left) / r.width - 0.5, y = (e.clientY - r.top) / r.height - 0.5;
+      code.style.transform = "perspective(900px) rotateX(" + (-y * 7).toFixed(2) + "deg) rotateY(" + (x * 7).toFixed(2) + "deg)";
+    });
+    code.addEventListener("pointerleave", function () { code.style.transform = ""; });
+  }
+
+  // "Run" the Python sample: prints the Telugu lines one by one
+  var run = $("run"), lines = $("outLines"), topics = ["Python", "AI", "DevOps"], timer;
+  run.addEventListener("click", function () {
+    clearTimeout(timer);
+    run.disabled = true;
+    lines.className = "";
+    lines.textContent = "";
+    var i = 0;
+    (function next() {
+      if (i >= topics.length) { run.innerHTML = '<svg class="ic ic-fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4v16l13-8z"/></svg>Run again'; run.disabled = false; return; }
+      var d = document.createElement("div");
+      d.className = "line";
+      d.textContent = "\u0C28\u0C2E\u0C38\u0C4D\u0C15\u0C3E\u0C30\u0C02, " + topics[i++] + " \u0C28\u0C47\u0C30\u0C4D\u0C1A\u0C41\u0C15\u0C41\u0C02\u0C26\u0C3E\u0C02!";
+      lines.appendChild(d);
+      timer = setTimeout(next, reduce ? 0 : 450);
+    })();
+  });
+  // Scroll reveal, staggered; cards stagger in
+  var rev = Array.prototype.slice.call(document.querySelectorAll(".sec-head, .ccard, .logos-panel, .say, .foot > div"));
+  document.querySelectorAll(".cards").forEach(function (ul) {
+    ul.querySelectorAll(".ccard").forEach(function (row, i) { row.style.setProperty("--d", (i * 0.08) + "s"); });
+  });
+  document.querySelectorAll(".foot > div").forEach(function (el, i) { el.style.setProperty("--d", (i * 0.1) + "s"); });
+  rev.forEach(function (el) { el.classList.add("reveal"); });
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+    rev.forEach(function (el) { io.observe(el); });
+  } else {
+    rev.forEach(function (el) { el.classList.add("in"); });
+  }
+
+  // Endless logo strip: duplicate the logos once so the loop has no gap
+  var strip = document.querySelector(".logos");
+  if (strip && !reduce) {
+    Array.prototype.slice.call(strip.children).forEach(function (img) {
+      var c = img.cloneNode(true);
+      c.setAttribute("aria-hidden", "true");
+      strip.appendChild(c);
+    });
+  }
+
+  // Run the sample once on load so the hero feels alive
+  setTimeout(function () { if (!run.disabled) run.click(); }, reduce ? 0 : 1400);
+  // Animated backdrop: glowing sparks drift upward, link up when close,
+  // and are pushed away by the cursor.
+  var cv = $("bgfx"), cx = cv && cv.getContext && cv.getContext("2d");
+  if (cx) {
+    var dpr = Math.min(window.devicePixelRatio || 1, 2), W = 0, H = 0, ps = [];
+    var mouse = { x: -9999, y: -9999 };
+    var COLORS = ["255,102,0", "255,133,51", "255,170,90"];
+    function size() {
+      W = window.innerWidth; H = window.innerHeight;
+      cv.width = W * dpr; cv.height = H * dpr;
+      cx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      var n = Math.max(30, Math.min(90, Math.round(W * H / 16000)));
+      ps = [];
+      for (var i = 0; i < n; i++) {
+        ps.push({
+          x: Math.random() * W, y: Math.random() * H,
+          vx: (Math.random() - 0.5) * 0.25, vy: -(0.15 + Math.random() * 0.55),
+          r: 0.8 + Math.random() * 2.2, a: 0.35 + Math.random() * 0.65,
+          c: COLORS[(Math.random() * COLORS.length) | 0]
+        });
+      }
+    }
+    function frame() {
+      cx.clearRect(0, 0, W, H);
+      cx.globalCompositeOperation = "lighter";
+      for (var i = 0; i < ps.length; i++) {
+        var p = ps[i];
+        if (!reduce) {
+          var dx = p.x - mouse.x, dy = p.y - mouse.y, d2 = dx * dx + dy * dy;
+          if (d2 < 22500 && d2 > 0) {               // push away from cursor (150px)
+            var d = Math.sqrt(d2), f = (150 - d) / 150 * 1.4;
+            p.x += dx / d * f; p.y += dy / d * f;
+          }
+          p.x += p.vx; p.y += p.vy;
+          if (p.y < -10) { p.y = H + 10; p.x = Math.random() * W; }
+          if (p.x < -10) p.x = W + 10; else if (p.x > W + 10) p.x = -10;
+        }
+        cx.shadowColor = "rgba(" + p.c + ",.9)";
+        cx.shadowBlur = 14;
+        cx.fillStyle = "rgba(" + p.c + "," + p.a + ")";
+        cx.beginPath(); cx.arc(p.x, p.y, p.r, 0, 6.2832); cx.fill();
+      }
+      cx.shadowBlur = 0;
+      for (var a = 0; a < ps.length; a++) {
+        for (var b = a + 1; b < ps.length; b++) {
+          var lx = ps[a].x - ps[b].x, ly = ps[a].y - ps[b].y, dist = lx * lx + ly * ly;
+          if (dist < 12100) {                         // link particles under 110px apart
+            cx.strokeStyle = "rgba(255,120,30," + (0.22 * (1 - dist / 12100)) + ")";
+            cx.lineWidth = 1;
+            cx.beginPath(); cx.moveTo(ps[a].x, ps[a].y); cx.lineTo(ps[b].x, ps[b].y); cx.stroke();
+          }
+        }
+        var mx = ps[a].x - mouse.x, my = ps[a].y - mouse.y, md = mx * mx + my * my;
+        if (md < 32400) {                             // link to cursor under 180px
+          cx.strokeStyle = "rgba(255,150,60," + (0.5 * (1 - md / 32400)) + ")";
+          cx.beginPath(); cx.moveTo(ps[a].x, ps[a].y); cx.lineTo(mouse.x, mouse.y); cx.stroke();
+        }
+      }
+      cx.globalCompositeOperation = "source-over";
+      if (!reduce) requestAnimationFrame(frame);
+    }
+    size();
+    window.addEventListener("resize", function () { size(); if (reduce) frame(); });
+    window.addEventListener("pointermove", function (e) { mouse.x = e.clientX; mouse.y = e.clientY; }, { passive: true });
+    window.addEventListener("pointerleave", function () { mouse.x = mouse.y = -9999; });
+    frame();
+  }
+})();
+</script>
+<script>
+/* ===== STUDENT REVIEWS: 115 review screenshots from pythonlife.in/reviews.html ===== */
+(function(){
+  var COUNT=115,BASE="https://pythonlife.in/images/reviews/R-";
+  var track=document.getElementById("rvTrack");if(!track)return;
+  var html="";
+  for(var i=1;i<=COUNT;i++){
+    html+='<figure class="rv-card rv-shot glass"><button type="button" class="rv-open" data-i="'+i+'" aria-label="Open student review '+i+'"><img src="'+BASE+i+'.jpg" alt="Student review '+i+'" loading="lazy" decoding="async"></button></figure>';
+  }
+  track.innerHTML=html;
+  /* click a review to view it larger */
+  var box=document.createElement("div");box.className="rv-box";box.setAttribute("role","dialog");box.setAttribute("aria-modal","true");box.hidden=true;
+  box.innerHTML='<button type="button" class="rv-x" aria-label="Close">&times;</button><img alt="">';
+  document.body.appendChild(box);
+  var big=box.querySelector("img");
+  function close(){box.hidden=true;document.body.style.overflow=""}
+  track.addEventListener("click",function(e){var b=e.target.closest(".rv-open");if(!b)return;
+    big.src=BASE+b.getAttribute("data-i")+".jpg";big.alt="Student review "+b.getAttribute("data-i");box.hidden=false;document.body.style.overflow="hidden"});
+  box.addEventListener("click",close);
+  document.addEventListener("keydown",function(e){if(e.key==="Escape"&&!box.hidden)close()});
+  /* continuous auto-scroll: glides left, loops seamlessly, pauses on hover/touch/focus or when a review is open */
+  var first=[].slice.call(track.querySelectorAll(".rv-card")).slice(0,10);
+  first.forEach(function(c){var k=c.cloneNode(true);k.setAttribute("aria-hidden","true");k.querySelector("button").tabIndex=-1;track.appendChild(k)});
+  var pos=0,paused=false,last=0,SPEED=45; /* pixels per second */
+  var wrap=track.parentNode;
+  function loopPoint(){var k=track.querySelectorAll(".rv-card")[COUNT];return k?k.offsetLeft-track.querySelector(".rv-card").offsetLeft:0}
+  function tick(t){
+    var dt=last?Math.min(t-last,60):16;last=t;
+    if(paused||!box.hidden||document.hidden){pos=track.scrollLeft}
+    else{
+      pos+=SPEED*dt/1000;
+      var lp=loopPoint();if(lp&&pos>=lp)pos-=lp;
+      track.scrollLeft=pos;
+    }
+    requestAnimationFrame(tick);
+  }
+  wrap.addEventListener("mouseenter",function(){paused=true});
+  wrap.addEventListener("mouseleave",function(){paused=false});
+  wrap.addEventListener("touchstart",function(){paused=true},{passive:true});
+  wrap.addEventListener("touchend",function(){setTimeout(function(){paused=false},3000)},{passive:true});
+  wrap.addEventListener("focusin",function(){paused=true});
+  wrap.addEventListener("focusout",function(){paused=false});
+  if(!window.matchMedia("(prefers-reduced-motion:reduce)").matches)requestAnimationFrame(tick);
+})();
+</script>
+<script>
+(function(){
+  var mq=window.matchMedia("(min-width:861px) and (hover:hover)");
+  document.querySelectorAll("#nav details").forEach(function(d){
+    var t;
+    function open(){clearTimeout(t);document.querySelectorAll("#nav details").forEach(function(o){if(o!==d)o.open=false});d.open=true}
+    function close(){t=setTimeout(function(){d.open=false},150)}
+    d.addEventListener("mouseenter",function(){if(mq.matches)open()});
+    d.addEventListener("mouseleave",function(){if(mq.matches)close()});
+    d.querySelector("summary").addEventListener("click",function(e){if(mq.matches){e.preventDefault();open()}});
+  });
+})();
+</script>
+<script>
+/* Track record: rendered from data. Edit STATS below, or set data-src="/api/stats.json" on #statRow
+   (JSON array of {value,label,color,icon,suffix}) to load it from your backend. */
+(function () {
+  var STATS = [
+    { value: 90000,   suffix: "+", label: "Happy Students",           color: "#f5b400", icon: "users"  },
+    { value: 300,     suffix: "+", label: "Batches Conducted",        color: "#ef4444", icon: "layers" },
+    { value: 48000,   suffix: "+", label: "Students Placed",          color: "#3b9cff", icon: "brief"  },
+    { value: 1000000, suffix: "+", label: "Telugu Student Community", color: "#00d1b2", icon: "globe"  }
+  ];
+  var ICONS = {
+    users:  '<path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.9M16 3.1a4 4 0 010 7.8"/>',
+    layers: '<path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/><path d="M3 17.5l9 5 9-5"/>',
+    brief:  '<rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/>',
+    globe:  '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/>',
+    trophy: '<path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 01-10 0zM7 6H4a3 3 0 003 4M17 6h3a3 3 0 01-3 4"/>'
+  };
+  var NS = "http://www.w3.org/2000/svg";
+  var row = document.getElementById("statRow");
+  if (!row) return;
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // 40000 -> "40K", 2000000 -> "2M", 400 -> "400"
+  function fmt(n) {
+    n = Math.round(n);
+    if (n >= 1e6) return +(n / 1e6).toFixed(1) + "M";
+    if (n >= 1e3) return +(n / 1e3).toFixed(1) + "K";
+    return String(n);
+  }
+
+  function icon(name) {
+    var svg = document.createElementNS(NS, "svg");
+    svg.setAttribute("class", "ic");
+    svg.setAttribute("viewBox", "0 0 24 24");
+    svg.setAttribute("aria-hidden", "true");
+    svg.innerHTML = ICONS[name] || ICONS.trophy;
+    return svg;
+  }
+
+  function animate(el, end, suffix) {
+    if (reduce) { el.textContent = fmt(end) + suffix; return; }
+    var t0 = null, dur = 1500;
+    function step(t) {
+      t0 = t0 || t;
+      var p = Math.min((t - t0) / dur, 1), e = 1 - Math.pow(1 - p, 3);
+      el.textContent = fmt(end * e) + suffix;
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  function render(items) {
+    row.textContent = "";
+    var io = ("IntersectionObserver" in window) ? new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target._go(); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.35 }) : null;
+
+    items.forEach(function (it, i) {
+      var li = document.createElement("li");
+      li.className = "stat glass spot";
+      li.style.setProperty("--c", it.color || "#ff6600");
+      li.style.setProperty("--d", (i * 90) + "ms");
+
+      var ic = document.createElement("span");
+      ic.className = "stat-ic";
+      ic.appendChild(icon(it.icon));
+
+      var num = document.createElement("b");
+      var suf = it.suffix == null ? "+" : it.suffix;
+      num.textContent = fmt(it.value) + suf;           // final value (also the no-JS-animation fallback)
+      num._go = function () { animate(num, +it.value, suf); };
+
+      var lab = document.createElement("span");
+      lab.className = "stat-l";
+      lab.textContent = it.label;
+
+      li.appendChild(ic); li.appendChild(num); li.appendChild(lab);
+      row.appendChild(li);
+      if (io && !reduce) { num.textContent = "0" + suf; io.observe(num); li.classList.add("stat-in"); }
+    });
+  }
+
+  render(STATS);
+
+  // optional: load live numbers from a JSON endpoint
+  var src = row.getAttribute("data-src");
+  if (src) {
+    fetch(src, { headers: { Accept: "application/json" } })
+      .then(function (r) { if (!r.ok) throw 0; return r.json(); })
+      .then(function (d) { if (Array.isArray(d) && d.length) render(d); })
+      .catch(function () { /* keep defaults */ });
+  }
+})();
+</script>
+<a class="wa" href="https://wa.me/919154083255" aria-label="Chat on WhatsApp"><img src="https://pythonlife.in/whatsapp.png" alt="" /></a>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>
+
