@@ -1,0 +1,442 @@
+{
+  "images/02.png": {
+    "height": 2400,
+    "sha256_rgba": "2ebbe20b6c6f76d419d0313df87c491316dd2654f443498bbb6edaa883f06259",
+    "width": 3000
+  },
+  "images/03.png": {
+    "height": 2400,
+    "sha256_rgba": "0232c4a3b529716f00c8313a2e1aaa2c4df8a241bd0a9cf747a5ffe878cddf27",
+    "width": 3000
+  },
+  "images/20220716_151454 (1) - Swara Hari.jpg": {
+    "height": 3264,
+    "sha256_rgba": "f68b15e6d768fc95a8d70a77fa51eaff5e8d8913c7571830cd37b70c8fdd6cd9",
+    "width": 2448
+  },
+  "images/Automation-testing.png": {
+    "height": 2400,
+    "sha256_rgba": "56e5e29665473872e5272d1eadb136d8563c5899e8d7d9d0e9b3f233c9252247",
+    "width": 3000
+  },
+  "images/Call3.png": {
+    "height": 2900,
+    "sha256_rgba": "78037dda13f26745dcabe14a4bbe1fb39bfe709ca9751eb22006a22d669def4c",
+    "width": 1876
+  },
+  "images/Call4.png": {
+    "height": 2100,
+    "sha256_rgba": "24b01b3fe189d766ebfa6de7fd125e017eb6ef605502a587ee62dd85b38ee909",
+    "width": 1700
+  },
+  "images/Certification.png": {
+    "height": 2100,
+    "sha256_rgba": "7bdafe87cc954836711ed2de8d7cd16a12e4a4e76f9a95091fbb6d3dcab664b6",
+    "width": 1700
+  },
+  "images/Communication-skills.png": {
+    "height": 2400,
+    "sha256_rgba": "990333f48bd59bff9f40104fcaf627e3b30609387e255f874afc15950ce2ca55",
+    "width": 3000
+  },
+  "images/Data_Analytics_ai.png": {
+    "height": 950,
+    "sha256_rgba": "926fcf7c9ab35d6ef7a9d0102485c1804dfa5d167988c51e292eb05553461588",
+    "width": 1200
+  },
+  "images/Devops _course_thumbnail": {
+    "height": 1882,
+    "sha256_rgba": "66297e177048f8891353edc3e757e60a9693c6061d851ab8847849025104fa86",
+    "width": 3340
+  },
+  "images/Devops _course_thumbnail (1)": {
+    "height": 1882,
+    "sha256_rgba": "66297e177048f8891353edc3e757e60a9693c6061d851ab8847849025104fa86",
+    "width": 3340
+  },
+  "images/Devops_course_thumbnail.png": {
+    "height": 1882,
+    "sha256_rgba": "66297e177048f8891353edc3e757e60a9693c6061d851ab8847849025104fa86",
+    "width": 3340
+  },
+  "images/FS AI.png": {
+    "height": 950,
+    "sha256_rgba": "2e5c4b608d9c78ffe46ed3cff7c9e5f168b82105641b29aeba40e92d2bd3c781",
+    "width": 1200
+  },
+  "images/GD & VE with AI (1).png": {
+    "height": 950,
+    "sha256_rgba": "b8744afd115890b4cf5829c829ee77f91d77d168f5143c055cee1def70b29b87",
+    "width": 1200
+  },
+  "images/GD & VE with AI.png": {
+    "height": 950,
+    "sha256_rgba": "b8744afd115890b4cf5829c829ee77f91d77d168f5143c055cee1def70b29b87",
+    "width": 1200
+  },
+  "images/Kiran_Sagar.png": {
+    "height": 1448,
+    "sha256_rgba": "b8a898e6dd3489614d31c5edec58a3fc722b3a9a94f5a54e21139843a11d96b2",
+    "width": 1086
+  },
+  "images/Study Material (1).png": {
+    "height": 2100,
+    "sha256_rgba": "45282ff98a12eec81d53e1c6153e907695e775d0793c9372f7ac82858f787579",
+    "width": 1700
+  },
+  "images/T26.png": {
+    "height": 1080,
+    "sha256_rgba": "c4897f7711a115ecdcf63f83e15f0f5ecca5672bb1d268255fef0d22e8b73de8",
+    "width": 1920
+  },
+  "images/Thumbai.png": {
+    "height": 1080,
+    "sha256_rgba": "b2daa911cd9e34dc96d12fbd614239948134c1a6135be74addbe817331b55e80",
+    "width": 1920
+  },
+  "images/Thumbnail Data Analyst AI.png": {
+    "height": 1080,
+    "sha256_rgba": "1c8dee9369996c30b12949db1ff0955fd4e74d0fd73e76e10deb3b69617a8569",
+    "width": 1920
+  },
+  "images/Thumbnail GD & VE with AI.png": {
+    "height": 1080,
+    "sha256_rgba": "f6fefc59933f2c62ba0065f12bf0a82656e046ed7ed73733f40776e2b5e50dc2",
+    "width": 1920
+  },
+  "images/Thumbnail_FS AI.png": {
+    "height": 1080,
+    "sha256_rgba": "5c50f438f633b7578f6af127f07d93e2e2760de5aff2bea95062837e629eef98",
+    "width": 1920
+  },
+  "images/agentbanner.png": {
+    "height": 900,
+    "sha256_rgba": "a8ac5abc8988bd96fc51471826847480080ca53a8cb58adb8d4602e72cafb197",
+    "width": 1200
+  },
+  "images/agenthumb.png": {
+    "height": 1080,
+    "sha256_rgba": "164732f53c4d2996c80422d576b5d985773bb4f4cc683dcbd884148cc5d2c66a",
+    "width": 1920
+  },
+  "images/agenticaii.png": {
+    "height": 900,
+    "sha256_rgba": "55c7d8296268c696c71ede3a860f81db9c4aa47bdc8ee74942c8ced64cde4283",
+    "width": 1200
+  },
+  "images/agenticaiii.png": {
+    "height": 1000,
+    "sha256_rgba": "da6dc068863cda12727bf440a60efa53703545a3a2c2c66dc8c5abbb9adc8194",
+    "width": 1200
+  },
+  "images/ai-1.png": {
+    "height": 2400,
+    "sha256_rgba": "8e97ef5cdc7a4ad97d4f5bb4ece73b68a70e131ac281ae8e30ed1586e517f907",
+    "width": 3000
+  },
+  "images/b1.jpg": {
+    "height": 700,
+    "sha256_rgba": "2a9c3bbc1ab362c729106c393e9dc2870c1f3dd0dfeb6b0d01168190c9392d50",
+    "width": 1920
+  },
+  "images/banner.jpg": {
+    "height": 1080,
+    "sha256_rgba": "8ef9fee81d66cddfc48e857721a8aa38fd326af67e87b08db669ccdcb661942e",
+    "width": 1920
+  },
+  "images/contact.jpg": {
+    "height": 557,
+    "sha256_rgba": "72c83139c31c98fd98e5a6bbd42aea63b05802052d6f0a8b4ea162e20e6d8a4b",
+    "width": 1440
+  },
+  "images/cskills.png": {
+    "height": 1080,
+    "sha256_rgba": "faac9253870da9698b78f29e313a33708c2c853c9b8bc66c62e0b96fa4d5bc9b",
+    "width": 1920
+  },
+  "images/data-science.png": {
+    "height": 300,
+    "sha256_rgba": "93d2dfdb1ab3cdf662062045ac7bf7fa1224100aa7318a41fa2f4c79f4634d0a",
+    "width": 400
+  },
+  "images/datanalysis_course.png": {
+    "height": 1080,
+    "sha256_rgba": "00feffd31a1305af6f21c909e9bd95519b1c91e3fa67ed1ddf5c68e5ac98810b",
+    "width": 1920
+  },
+  "images/deevveevv.png": {
+    "height": 1882,
+    "sha256_rgba": "66297e177048f8891353edc3e757e60a9693c6061d851ab8847849025104fa86",
+    "width": 3340
+  },
+  "images/devops.png": {
+    "height": 300,
+    "sha256_rgba": "d91a93e2634410dfa9311b6cb63e9cc7ce045382c627a63b0716c22e35bc1b85",
+    "width": 400
+  },
+  "images/devps logo in course.png": {
+    "height": 2400,
+    "sha256_rgba": "3eab8452d0a90b8bb3ef20c7332d025a91164916b95814a3859fe04fabee4d7a",
+    "width": 3000
+  },
+  "images/dp6.png": {
+    "height": 200,
+    "sha256_rgba": "e5f128a28e80980a17f227c40ee8211ff9fe575ec20b4f06085aa9bd049affb2",
+    "width": 200
+  },
+  "images/dp8.png": {
+    "height": 200,
+    "sha256_rgba": "b8b17fbb025da3338ffab8ad8a0af1865a644c06bd66e2599f6020b50af87937",
+    "width": 200
+  },
+  "images/ds logo in course.png": {
+    "height": 2400,
+    "sha256_rgba": "2ebbe20b6c6f76d419d0313df87c491316dd2654f443498bbb6edaa883f06259",
+    "width": 3000
+  },
+  "images/ds logoo.png": {
+    "height": 2400,
+    "sha256_rgba": "d901811647d50e4dc018031827247a338cd98e4a79f97d2c9fc267ab9348d796",
+    "width": 3000
+  },
+  "images/fspai.png": {
+    "height": 3764,
+    "sha256_rgba": "78c19de3e2c0d916bf251f727aba9ae87302cc94c2ac50e41a568d33de83b11f",
+    "width": 6688
+  },
+  "images/genaiiii.png": {
+    "height": 950,
+    "sha256_rgba": "7347d2d8ab7d2a5be53bef08156e6dda44c5c1a670f65f2e784087039e7b032c",
+    "width": 1200
+  },
+  "images/graphic_thumbnail_web.png": {
+    "height": 1080,
+    "sha256_rgba": "e3376e4801540a21227e829cf161ecb27a2aee9b1f6c3a079ade861b8a1f60bf",
+    "width": 1920
+  },
+  "images/jai.png": {
+    "height": 950,
+    "sha256_rgba": "01ab4deca06470f98800529a33d6b24cb9917d6958e1747807856607c9026e12",
+    "width": 1200
+  },
+  "images/java banner.jpg": {
+    "height": 1080,
+    "sha256_rgba": "d71f777592563fcd57be91aa4ada0f08279915cd25684218bf20b00d8b80c21a",
+    "width": 1920
+  },
+  "images/javawebban.png": {
+    "height": 720,
+    "sha256_rgba": "0d43afaf83b2571a055c200de99b2d5bc0516f5451a8e8ffb2657696c92fdb63",
+    "width": 1280
+  },
+  "images/logo.png": {
+    "height": 770,
+    "sha256_rgba": "2553d301ce62e743b55185d988496c81830fc1c3e84a3efc0b201bfee4a13f6a",
+    "width": 2038
+  },
+  "images/naresh_java.png": {
+    "height": 720,
+    "sha256_rgba": "866163cda8b61ca259d2f4a9369da0393cd3a59cbfaff1d9ae85684096081920",
+    "width": 1280
+  },
+  "images/online.png": {
+    "height": 2100,
+    "sha256_rgba": "04526fc36ae576efc359185ff3d231f120b3bb08c77175a7fc70a7a1e7bddc37",
+    "width": 1700
+  },
+  "images/op1.png": {
+    "height": 300,
+    "sha256_rgba": "836c412e82c2adf98f71db341cc365fe7d8f88cc7ff208aa10d8ea3d1ffd37a4",
+    "width": 400
+  },
+  "images/op2.png": {
+    "height": 300,
+    "sha256_rgba": "1fc5ced6e5f61311a63483dd35662efc10e202ae71620c2d08c309b180854c04",
+    "width": 400
+  },
+  "images/op3.png": {
+    "height": 300,
+    "sha256_rgba": "5971a4bb7042607b378f56e5c6c1a0f1455df8e316d9a54f549178b5b8265bd3",
+    "width": 400
+  },
+  "images/op4.png": {
+    "height": 300,
+    "sha256_rgba": "d44b60ee4785b077b951e5c1a0f3e144699f7b460e2df66d1d19e64a0caa4921",
+    "width": 400
+  },
+  "images/op5.png": {
+    "height": 300,
+    "sha256_rgba": "0e96eac655649451fc89c0619ae1aac414ca807c8bb0d0981e7e31c9a5f61661",
+    "width": 400
+  },
+  "images/pc1.jpg": {
+    "height": 1333,
+    "sha256_rgba": "8c86c778c3aec48af58087017d0c017019d06ba514aa77358cdc27c1b0c0e361",
+    "width": 2000
+  },
+  "images/pc2.jpg": {
+    "height": 1333,
+    "sha256_rgba": "f07a370346afcad431b8bcac546890ff0c94db7eec8fc78639dc677e5b986419",
+    "width": 2000
+  },
+  "images/pc3.jpg": {
+    "height": 1333,
+    "sha256_rgba": "41075760e0953794fd5386dce67c1a468c730f0afdc8c56874a96ae7ea563800",
+    "width": 2000
+  },
+  "images/pc4.jpg": {
+    "height": 2000,
+    "sha256_rgba": "cbb27146e4d52ae4972225503e5f82d89fb7013a703dae2f46a596e1eff08988",
+    "width": 3000
+  },
+  "images/pc5.jpg": {
+    "height": 1867,
+    "sha256_rgba": "88d7d337c9f4515cc0324d283aefeade9993a623687be29de37ef801b4c1c21e",
+    "width": 2800
+  },
+  "images/pc6.jpg": {
+    "height": 2000,
+    "sha256_rgba": "c3ea1d935eb51b2336f3a4354fadfdd8aa6132b53d49c6a8e17480527ec2b181",
+    "width": 3000
+  },
+  "images/poster.png": {
+    "height": 1080,
+    "sha256_rgba": "46ee822ac6b7a674c0fe6f5afc078f8264f725baa81d91435477eec1dc1bd809",
+    "width": 1920
+  },
+  "images/pp1.png": {
+    "height": 300,
+    "sha256_rgba": "7dfd4f16d6a418f59fc7369388891dd29e520d06a27e29c20f778b127e368568",
+    "width": 400
+  },
+  "images/pp2.png": {
+    "height": 300,
+    "sha256_rgba": "11de5217df94ea68795748d6d0703657b02ebc2d749c0d268d1e8a2d05a84bb5",
+    "width": 400
+  },
+  "images/pp3.png": {
+    "height": 300,
+    "sha256_rgba": "815e8538fb4d836936387ff8f7672c9239e386d4f2f2c93111be264d5ffaf879",
+    "width": 400
+  },
+  "images/pp5.png": {
+    "height": 300,
+    "sha256_rgba": "9ba9d4605d7254bc8bbd7164fd82c7a7d13582e5f4e10dbbe721e35a9da0574b",
+    "width": 400
+  },
+  "images/pp6.png": {
+    "height": 300,
+    "sha256_rgba": "467d350a029cf66d82f2b96d816e20bddfda89c5f45595ed74441926982cf4ff",
+    "width": 400
+  },
+  "images/pp7.png": {
+    "height": 300,
+    "sha256_rgba": "b140625119dbd288722233dc5812ba8d1eac5c3f0b4bdb05dc88162a29a258dc",
+    "width": 400
+  },
+  "images/pruposter.png": {
+    "height": 720,
+    "sha256_rgba": "b40efb4b3ef2b36b7f100cacb56ff827f9205c6cc8be0c74184961eaefb57a58",
+    "width": 1280
+  },
+  "images/pythonlogo.png": {
+    "height": 2400,
+    "sha256_rgba": "4dfc7303f055c0bbac7e3f249322897620bd13540a95afaa634ab973c15e97d2",
+    "width": 3000
+  },
+  "images/pythonposter.jpeg": {
+    "height": 1600,
+    "sha256_rgba": "cd9a872a867e011a743af9bf74af303eb8939a9cbdc8e4af35547e43883c8be4",
+    "width": 1460
+  },
+  "images/r1.jpg": {
+    "height": 1728,
+    "sha256_rgba": "c16a4aca998323943b2067285145862f3876164b4631ab93b74e0011d7fb6360",
+    "width": 2304
+  },
+  "images/r10.jpg": {
+    "height": 959,
+    "sha256_rgba": "ea59d261af690dae5a54e296e105b06266f29cb700ed7c3e4226e1700046d177",
+    "width": 1000
+  },
+  "images/r11.JPG": {
+    "height": 531,
+    "sha256_rgba": "669b972c738d8452f78a2b5664aea86f4e9b60b09f3e2e53f754cc77b1f1e15a",
+    "width": 413
+  },
+  "images/r14.jpg": {
+    "height": 3264,
+    "sha256_rgba": "dc47d5e8b3321dfc4dc1b5db17502db34915a8811cb3c2286d0b4e693b84c4e8",
+    "width": 2448
+  },
+  "images/r3.jpg": {
+    "height": 1944,
+    "sha256_rgba": "19b110d66a6609fd617c53db330ff71c2f84d70f02bcaa9febf2006fc2208271",
+    "width": 2592
+  },
+  "images/r4.jpg": {
+    "height": 4896,
+    "sha256_rgba": "a8eb3e2af20e60003e0b3bb7223591dc200a4c9cafc30092283be1ae4ba5020c",
+    "width": 6528
+  },
+  "images/r6.jpg": {
+    "height": 4000,
+    "sha256_rgba": "6765708de8ce577f92549618a64f3fc8c9682d6ccf29552b9d968759c53cf589",
+    "width": 2250
+  },
+  "images/r8.jpg": {
+    "height": 531,
+    "sha256_rgba": "c866a220db6be81e51f3fbef85e4904495aaaea92058a273ae311da2e8d63e6a",
+    "width": 413
+  },
+  "images/reviews.jpg": {
+    "height": 627,
+    "sha256_rgba": "807eed4b42dd22afc802c60c0412b49756fd29a22b01bc27c4e4a343e74f5780",
+    "width": 1440
+  },
+  "images/sd3.jpeg": {
+    "height": 1159,
+    "sha256_rgba": "f3e2737b256aac195d98454db47b1622d94d12d20d5fcdbb71164121a4bc2509",
+    "width": 1280
+  },
+  "images/swaroopa_img.png": {
+    "height": 1199,
+    "sha256_rgba": "af8fbd42f5ca39025bccfa52927b3cbe4f3d8086a9eeca31c39d04da05f4bc08",
+    "width": 1312
+  },
+  "images/tc-10.png": {
+    "height": 300,
+    "sha256_rgba": "2d011d06bf3f0591f65c4f4a03500b9f9839038d253d3094d36da98a9462422f",
+    "width": 300
+  },
+  "images/tcs.png": {
+    "height": 1080,
+    "sha256_rgba": "cda2315c1d7622ec9abea354d48700bcb92e14cd48b47db7aaefe789b5eae1e3",
+    "width": 1080
+  },
+  "images/vanaja k.jpg": {
+    "height": 932,
+    "sha256_rgba": "252fcd93c0f3749a71e368b574bca3cf5c2b1f4843065388612b50762f05f372",
+    "width": 764
+  },
+  "images/vasuposter.png": {
+    "height": 720,
+    "sha256_rgba": "88bec9c52d63b6401f9941131d6bbf55c3e75a7a803b77372207e4d20831f770",
+    "width": 1280
+  },
+  "images/vasupru.png": {
+    "height": 720,
+    "sha256_rgba": "8ee6dcd175f75b22d911bb44737ded480114b74d300d129a6697f014501bb44a",
+    "width": 1280
+  },
+  "images/vector-.png": {
+    "height": 477,
+    "sha256_rgba": "e4eb71606ee03b539fff5455bb59426f566f4d1107b8ea108de76772e47b88bc",
+    "width": 2120
+  },
+  "images/vp.png": {
+    "height": 720,
+    "sha256_rgba": "e4ca7cd389342fa40eaf06df65c108585f0034e29374f224c8d5dff71adb7518",
+    "width": 1280
+  }
+}
