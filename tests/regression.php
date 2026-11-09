@@ -196,6 +196,48 @@ foreach ([
 }
 ok('homepage navigation and media contracts');
 
+$fragment = shell_exec('php ' . escapeshellarg($root . '/index.php') . ' 2>/dev/null');
+if (!is_string($fragment) || !str_contains($fragment, 'whatsapp_float') || str_contains($fragment, 'Learn Programming')) {
+    fail('direct index.php execution no longer returns only the WhatsApp fragment');
+}
+ok('index.php fragment');
+
+$port = 8891;
+$server = proc_open(
+    'php -S 127.0.0.1:' . $port . ' -t ' . escapeshellarg($root),
+    [1 => ['file', '/tmp/php-parity-server.log', 'w'], 2 => ['file', '/tmp/php-parity-server.log', 'a']],
+    $pipes,
+    $root
+);
+if (!is_resource($server)) {
+    fail('could not start PHP server for directory-index check');
+} else {
+    $deadline = microtime(true) + 5;
+    $rootBody = false;
+    while (microtime(true) < $deadline) {
+        $rootBody = @file_get_contents('http://127.0.0.1:' . $port . '/');
+        if ($rootBody !== false) {
+            break;
+        }
+        usleep(100000);
+    }
+    $direct = @file_get_contents('http://127.0.0.1:' . $port . '/index.php');
+    $named = @file_get_contents('http://127.0.0.1:' . $port . '/index.html');
+    $expectedHome = file_get_contents($root . '/index.html');
+    if ($rootBody !== $expectedHome) {
+        fail('GET / does not serve index.html (' . strlen((string) $rootBody) . ' bytes)');
+    }
+    if ($named !== $expectedHome) {
+        fail('GET /index.html changed');
+    }
+    if (!is_string($direct) || !str_contains($direct, 'whatsapp_float') || str_contains($direct, 'Learn Programming')) {
+        fail('GET /index.php no longer returns the WhatsApp fragment');
+    }
+    proc_terminate($server);
+    proc_close($server);
+}
+ok('directory index serves the live homepage');
+
 if ($failures > 0) {
     fwrite(STDERR, "{$failures} failure(s)\n");
     exit(1);

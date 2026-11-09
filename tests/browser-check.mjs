@@ -99,6 +99,16 @@ try {
     mobile: false,
   });
 
+  await go(send, `${base}/`);
+  await shot(send, "root-desktop");
+  const rootHome = await evalJson(send, `({
+    h1: document.querySelector("h1") ? document.querySelector("h1").textContent.trim() : "",
+    video: !!document.querySelector("video source[src='videos/Digital globe.mp4']"),
+    nav: document.querySelectorAll("#nav a").length
+  })`);
+  expect(rootHome.h1.includes("Learn Programming"), "directory index shows the homepage");
+  expect(rootHome.video && rootHome.nav > 5, "directory index keeps homepage video and navigation");
+
   await go(send, `${base}/index.html`);
   await shot(send, "index-desktop");
   const home = await evalJson(send, `({
